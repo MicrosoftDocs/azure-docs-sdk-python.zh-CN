@@ -1,0 +1,35 @@
+- name: 面向 Python 开发人员的 Azure
+  href: index.yml
+  items:
+    - name: 概述
+      href: python-sdk-azure-overview.md
+    - name: 工具
+      href: python-azure-tools.md
+    - name: Python 模块入门
+      href: python-sdk-azure-get-started.md
+    - name: 身份验证
+      href: python-sdk-azure-authenticate.md
+    - name: 快速入门
+      items:
+        - name: Web 应用
+          href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-python'
+        - name: PostgreSQL 数据库
+          href: 'https://docs.microsoft.com/azure/postgresql/connect-python'
+        - name: CosmosDB
+          href: 'https://docs.microsoft.com/azure/cosmos-db/create-documentdb-python'
+        - name: 数据湖分析
+          href: 'https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-python-sdk'
+    - name: 教程
+      items:
+        - name: Flask + PostgreSQL
+          href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-tutorial-docker-python-postgresql-app'
+    - name: 示例
+      items:
+        - name: 虚拟机
+          href: python-sdk-azure-virtual-machine-samples.md
+        - name: Web 应用
+          href: python-sdk-azure-web-apps-samples.md
+        - name: SQL 数据库
+          href: python-sdk-azure-sql-database-samples.md
+        - name: 所有 Python 示例
+          href: 'https://azure.microsoft.com/resources/samples/?platform=python'
