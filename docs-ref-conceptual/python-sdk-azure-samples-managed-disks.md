@@ -10,26 +10,26 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
 ms.author: liwong
-ms.openlocfilehash: 776e13ed91482c34e5d637d5eedf2640cd4ca9f4
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 4154367f0449b174790ee3f3c9480ca0bceeea87
+ms.sourcegitcommit: c6d9500492131bf782488fcafc7c5c41c2703e92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 09/13/2017
 ---
-# <a name="managed-disks"></a><span data-ttu-id="f51ca-103">托管磁盘</span><span class="sxs-lookup"><span data-stu-id="f51ca-103">Managed Disks</span></span>
+# <a name="managed-disks"></a><span data-ttu-id="c234d-103">托管磁盘</span><span class="sxs-lookup"><span data-stu-id="c234d-103">Managed Disks</span></span>
 
-<span data-ttu-id="f51ca-104">Azure 托管磁盘和规模集中的 1000 个 VM 现已推出[正式版](https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-managed-disks-and-larger-scale-sets/)。Azure 托管磁盘提供简化的磁盘管理、增强的可伸缩性以及更高的安全性和缩放能力。</span><span class="sxs-lookup"><span data-stu-id="f51ca-104">Azure Managed Disks and 1000 VMs in a Scale Set are now [generally available](https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-managed-disks-and-larger-scale-sets/) Azure Managed Disks provide a simplified disk Management, enhanced Scalability, better Security and Scale.</span></span> <span data-ttu-id="f51ca-105">它消除了磁盘的存储帐户概念，使客户能够进行缩放，而无需担心存储帐户相关的限制。</span><span class="sxs-lookup"><span data-stu-id="f51ca-105">It takes away the notion of storage account for disks, enabling customers to scale without worrying about the limitations associated with storage accounts.</span></span> <span data-ttu-id="f51ca-106">本文提供有关从 Python 使用该服务的快速简介和参考信息。</span><span class="sxs-lookup"><span data-stu-id="f51ca-106">This post provides a quick introduction and reference on consuming the service from Python.</span></span>
-
-
-
-<span data-ttu-id="f51ca-107">从开发人员的角度来看，Azure CLI 中的托管磁盘体验与其他跨平台工具中的 CLI 体验有异曲同工之处。</span><span class="sxs-lookup"><span data-stu-id="f51ca-107">From a developer perspective, the Managed Disks experience in Azure CLI is idomatic to the CLI experience in other cross-platform tools.</span></span> <span data-ttu-id="f51ca-108">可以使用 [Azure Python](https://azure.microsoft.com/develop/python/) SDK 和 [azure-mgmt-compute 包 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute) 来管理托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="f51ca-108">You can use the [Azure Python](https://azure.microsoft.com/develop/python/) SDK and the [azure-mgmt-compute package 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute) to administer Managed Disks.</span></span> <span data-ttu-id="f51ca-109">可以参考[此教程](http://azure-sdk-for-python.readthedocs.io/en/latest/resourcemanagementcomputenetwork.html)创建计算客户端。</span><span class="sxs-lookup"><span data-stu-id="f51ca-109">You can create a compute client using this [tutorial](http://azure-sdk-for-python.readthedocs.io/en/latest/resourcemanagementcomputenetwork.html).</span></span>
+<span data-ttu-id="c234d-104">Azure 托管磁盘和规模集中的 1000 个 VM 现已推出[正式版](https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-managed-disks-and-larger-scale-sets/)。Azure 托管磁盘提供简化的磁盘管理、增强的可伸缩性以及更高的安全性和缩放能力。</span><span class="sxs-lookup"><span data-stu-id="c234d-104">Azure Managed Disks and 1000 VMs in a Scale Set are now [generally available](https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-managed-disks-and-larger-scale-sets/) Azure Managed Disks provide a simplified disk Management, enhanced Scalability, better Security and Scale.</span></span> <span data-ttu-id="c234d-105">它消除了磁盘的存储帐户概念，使客户能够进行缩放，而无需担心存储帐户相关的限制。</span><span class="sxs-lookup"><span data-stu-id="c234d-105">It takes away the notion of storage account for disks, enabling customers to scale without worrying about the limitations associated with storage accounts.</span></span> <span data-ttu-id="c234d-106">本文提供有关从 Python 使用该服务的快速简介和参考信息。</span><span class="sxs-lookup"><span data-stu-id="c234d-106">This post provides a quick introduction and reference on consuming the service from Python.</span></span>
 
 
-## <a name="standalone-managed-disks"></a><span data-ttu-id="f51ca-110">独立托管磁盘</span><span class="sxs-lookup"><span data-stu-id="f51ca-110">Standalone Managed Disks</span></span>
 
-<span data-ttu-id="f51ca-111">可通过多种方式轻松创建独立托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="f51ca-111">You can easily create standalone Managed Disks in a variety of ways.</span></span>
+<span data-ttu-id="c234d-107">从开发人员的角度来看，Azure CLI 中的托管磁盘体验与其他跨平台工具中的 CLI 体验有异曲同工之处。</span><span class="sxs-lookup"><span data-stu-id="c234d-107">From a developer perspective, the Managed Disks experience in Azure CLI is idomatic to the CLI experience in other cross-platform tools.</span></span> <span data-ttu-id="c234d-108">可以使用 [Azure Python](https://azure.microsoft.com/develop/python/) SDK 和 [azure-mgmt-compute 包 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute) 来管理托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="c234d-108">You can use the [Azure Python](https://azure.microsoft.com/develop/python/) SDK and the [azure-mgmt-compute package 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute) to administer Managed Disks.</span></span> <span data-ttu-id="c234d-109">可以参考[此教程](http://azure-sdk-for-python.readthedocs.io/en/latest/resourcemanagementcomputenetwork.html)创建计算客户端。</span><span class="sxs-lookup"><span data-stu-id="c234d-109">You can create a compute client using this [tutorial](http://azure-sdk-for-python.readthedocs.io/en/latest/resourcemanagementcomputenetwork.html).</span></span>
 
-### <a name="create-an-empty-managed-disk"></a><span data-ttu-id="f51ca-112">创建空托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="f51ca-112">Create an empty Managed Disk.</span></span>
+
+## <a name="standalone-managed-disks"></a><span data-ttu-id="c234d-110">独立托管磁盘</span><span class="sxs-lookup"><span data-stu-id="c234d-110">Standalone Managed Disks</span></span>
+
+<span data-ttu-id="c234d-111">可通过多种方式轻松创建独立托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="c234d-111">You can easily create standalone Managed Disks in a variety of ways.</span></span>
+
+### <a name="create-an-empty-managed-disk"></a><span data-ttu-id="c234d-112">创建空托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="c234d-112">Create an empty Managed Disk.</span></span>
 ```python
 from azure.mgmt.compute.models import DiskCreateOption
 
@@ -47,7 +47,7 @@ async_creation = compute_client.disks.create_or_update(
 disk_resource = async_creation.result()
 ```
 
-### <a name="create-a-managed-disk-from-blob-storage"></a><span data-ttu-id="f51ca-113">从 Blob 存储创建托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="f51ca-113">Create a Managed Disk from Blob Storage.</span></span>
+### <a name="create-a-managed-disk-from-blob-storage"></a><span data-ttu-id="c234d-113">从 Blob 存储创建托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="c234d-113">Create a Managed Disk from Blob Storage.</span></span>
 ```python
 from azure.mgmt.compute.models import DiskCreateOption
 
@@ -65,7 +65,7 @@ async_creation = compute_client.disks.create_or_update(
 disk_resource = async_creation.result()
 ```
 
-### <a name="create-a-managed-disk-from-your-own-image"></a><span data-ttu-id="f51ca-114">从自己的映像创建托管磁盘</span><span class="sxs-lookup"><span data-stu-id="f51ca-114">Create a Managed Disk from your own Image</span></span>
+### <a name="create-a-managed-disk-from-your-own-image"></a><span data-ttu-id="c234d-114">从自己的映像创建托管磁盘</span><span class="sxs-lookup"><span data-stu-id="c234d-114">Create a Managed Disk from your own Image</span></span>
 ```python
 from azure.mgmt.compute.models import DiskCreateOption
 
@@ -86,11 +86,11 @@ async_creation = compute_client.disks.create_or_update(
 disk_resource = async_creation.result()
 ```
 
-## <a name="virtual-machine-with-managed-disks"></a><span data-ttu-id="f51ca-115">包含托管磁盘的虚拟机</span><span class="sxs-lookup"><span data-stu-id="f51ca-115">Virtual Machine with Managed Disks</span></span>
+## <a name="virtual-machine-with-managed-disks"></a><span data-ttu-id="c234d-115">包含托管磁盘的虚拟机</span><span class="sxs-lookup"><span data-stu-id="c234d-115">Virtual Machine with Managed Disks</span></span>
 
-<span data-ttu-id="f51ca-116">可以根据特定的磁盘映像创建包含隐式托管磁盘的虚拟机。</span><span class="sxs-lookup"><span data-stu-id="f51ca-116">You can create a Virtual Machine with an implicit Managed Disk for a specific disk image.</span></span> <span data-ttu-id="f51ca-117">在不指定所有磁盘详细信息的情况下隐式创建托管磁盘简化了创建过程。</span><span class="sxs-lookup"><span data-stu-id="f51ca-117">Creation is simplified with implicit creation of managed disks without specifying all the disk details.</span></span> <span data-ttu-id="f51ca-118">无需担心如何创建和管理存储帐户。</span><span class="sxs-lookup"><span data-stu-id="f51ca-118">You do not have to worry about creating and managing Storage Accounts.</span></span>
+<span data-ttu-id="c234d-116">可以根据特定的磁盘映像创建包含隐式托管磁盘的虚拟机。</span><span class="sxs-lookup"><span data-stu-id="c234d-116">You can create a Virtual Machine with an implicit Managed Disk for a specific disk image.</span></span> <span data-ttu-id="c234d-117">在不指定所有磁盘详细信息的情况下隐式创建托管磁盘简化了创建过程。</span><span class="sxs-lookup"><span data-stu-id="c234d-117">Creation is simplified with implicit creation of managed disks without specifying all the disk details.</span></span> <span data-ttu-id="c234d-118">无需担心如何创建和管理存储帐户。</span><span class="sxs-lookup"><span data-stu-id="c234d-118">You do not have to worry about creating and managing Storage Accounts.</span></span>
 
-<span data-ttu-id="f51ca-119">从 Azure 中的 OS 映像创建 VM 时，会隐式创建托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="f51ca-119">A Managed Disk is created implicitly when creating VM from an OS image in Azure.</span></span> <span data-ttu-id="f51ca-120">在 ``storage_profile`` 参数中，``os_disk`` 现在是可选的；而在过去，创建虚拟机之前必须事先创建存储帐户。</span><span class="sxs-lookup"><span data-stu-id="f51ca-120">In the ``storage_profile`` parameter, ``os_disk`` is now optional and you don't have to create a storage account as required precondition to create a Virtual Machine.</span></span>
+<span data-ttu-id="c234d-119">从 Azure 中的 OS 映像创建 VM 时，会隐式创建托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="c234d-119">A Managed Disk is created implicitly when creating VM from an OS image in Azure.</span></span> <span data-ttu-id="c234d-120">在 ``storage_profile`` 参数中，``os_disk`` 现在是可选的；而在过去，创建虚拟机之前必须事先创建存储帐户。</span><span class="sxs-lookup"><span data-stu-id="c234d-120">In the ``storage_profile`` parameter, ``os_disk`` is now optional and you don't have to create a storage account as required precondition to create a Virtual Machine.</span></span>
 
 ```python
 storage_profile = azure.mgmt.compute.models.StorageProfile(
@@ -102,9 +102,9 @@ storage_profile = azure.mgmt.compute.models.StorageProfile(
     )
 )
 ``` 
-<span data-ttu-id="f51ca-121">此 ``storage_profile`` 参数现在有效。</span><span class="sxs-lookup"><span data-stu-id="f51ca-121">This ``storage_profile`` parameter is now valid.</span></span> <span data-ttu-id="f51ca-122">若要获取有关如何在 Python 中创建 VM（包括网络等）的完整示例，请查看完整的 [Python 中的 VM 教程](https://github.com/Azure-Samples/virtual-machines-python-manage)。</span><span class="sxs-lookup"><span data-stu-id="f51ca-122">To get a complete example on how to create a VM in Python (including network, etc), check the full [VM tutorial in Python](https://github.com/Azure-Samples/virtual-machines-python-manage).</span></span>
+<span data-ttu-id="c234d-121">此 ``storage_profile`` 参数现在有效。</span><span class="sxs-lookup"><span data-stu-id="c234d-121">This ``storage_profile`` parameter is now valid.</span></span> <span data-ttu-id="c234d-122">若要获取有关如何在 Python 中创建 VM（包括网络等）的完整示例，请查看完整的 [Python 中的 VM 教程](https://github.com/Azure-Samples/virtual-machines-python-manage)。</span><span class="sxs-lookup"><span data-stu-id="c234d-122">To get a complete example on how to create a VM in Python (including network, etc), check the full [VM tutorial in Python](https://github.com/Azure-Samples/virtual-machines-python-manage).</span></span>
 
-<span data-ttu-id="f51ca-123">可以轻松附加以前预配的托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="f51ca-123">You can easily attach a previously provisioned Managed Disk.</span></span>
+<span data-ttu-id="c234d-123">可以轻松附加以前预配的托管磁盘。</span><span class="sxs-lookup"><span data-stu-id="c234d-123">You can easily attach a previously provisioned Managed Disk.</span></span>
 ```python
 vm = compute.virtual_machines.get(
     'my_resource_group',
@@ -114,7 +114,7 @@ managed_disk = compute_client.disks.get('my_resource_group', 'myDisk')
 vm.storage_profile.data_disks.append({
     'lun': 12, # You choose the value, depending of what is available for you
     'name': managed_disk.name,
-    'create_option': DiskCreateOption.attach,
+    'create_option': DiskCreateOptionTypes.attach,
     'managed_disk': {
         'id': managed_disk.id
     }
@@ -127,11 +127,11 @@ async_update = compute_client.virtual_machines.create_or_update(
 async_update.wait()
 ```
 
-## <a name="virtual-machine-scale-sets-with-managed-disks"></a><span data-ttu-id="f51ca-124">带托管磁盘的虚拟机规模集</span><span class="sxs-lookup"><span data-stu-id="f51ca-124">Virtual Machine Scale Sets with Managed Disks</span></span>
+## <a name="virtual-machine-scale-sets-with-managed-disks"></a><span data-ttu-id="c234d-124">带托管磁盘的虚拟机规模集</span><span class="sxs-lookup"><span data-stu-id="c234d-124">Virtual Machine Scale Sets with Managed Disks</span></span>
 
-<span data-ttu-id="f51ca-125">在托管磁盘推出之前，需针对要放入规模集的所有 VM 手动创建存储帐户，然后使用列表参数 ``vhd_containers`` 将所有存储帐户名称提供给规模集 RestAPI。</span><span class="sxs-lookup"><span data-stu-id="f51ca-125">Before Managed Disks, you needed to create a storage account manually for all the VMs you wanted inside your Scale Set, and then use the list parameter ``vhd_containers`` to provide all the storage account name to the Scale Set RestAPI.</span></span> <span data-ttu-id="f51ca-126">此文 (`article <https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`) 中提供了官方转换指南。</span><span class="sxs-lookup"><span data-stu-id="f51ca-126">The official transition guide is available in this `article <https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`__.</span></span>
+<span data-ttu-id="c234d-125">在托管磁盘推出之前，需针对要放入规模集的所有 VM 手动创建存储帐户，然后使用列表参数 ``vhd_containers`` 将所有存储帐户名称提供给规模集 RestAPI。</span><span class="sxs-lookup"><span data-stu-id="c234d-125">Before Managed Disks, you needed to create a storage account manually for all the VMs you wanted inside your Scale Set, and then use the list parameter ``vhd_containers`` to provide all the storage account name to the Scale Set RestAPI.</span></span> <span data-ttu-id="c234d-126">此文 (`article <https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`) 中提供了官方转换指南。</span><span class="sxs-lookup"><span data-stu-id="c234d-126">The official transition guide is available in this `article <https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`__.</span></span>
 
-<span data-ttu-id="f51ca-127">现在，有了托管磁盘，不需要管理任何存储帐户。</span><span class="sxs-lookup"><span data-stu-id="f51ca-127">Now with Managed Disk, you don't have to manage any storage account at all.</span></span> <span data-ttu-id="f51ca-128">如果熟悉 VMSS Python SDK 的话，``storage_profile`` 与创建 VM 时所用的配置文件完全相同：</span><span class="sxs-lookup"><span data-stu-id="f51ca-128">If you're are used to the VMSS Python SDK, your ``storage_profile`` can now be exactly the same as the one used in VM creation:</span></span>
+<span data-ttu-id="c234d-127">现在，有了托管磁盘，不需要管理任何存储帐户。</span><span class="sxs-lookup"><span data-stu-id="c234d-127">Now with Managed Disk, you don't have to manage any storage account at all.</span></span> <span data-ttu-id="c234d-128">如果熟悉 VMSS Python SDK 的话，``storage_profile`` 与创建 VM 时所用的配置文件完全相同：</span><span class="sxs-lookup"><span data-stu-id="c234d-128">If you're are used to the VMSS Python SDK, your ``storage_profile`` can now be exactly the same as the one used in VM creation:</span></span>
 
 ```python
 'storage_profile': {
@@ -144,7 +144,7 @@ async_update.wait()
 },
 ```
 
-<span data-ttu-id="f51ca-129">完整示例：</span><span class="sxs-lookup"><span data-stu-id="f51ca-129">The full sample being:</span></span>
+<span data-ttu-id="c234d-129">完整示例：</span><span class="sxs-lookup"><span data-stu-id="c234d-129">The full sample being:</span></span>
 
 ```python
 naming_infix = "PyTestInfix"
@@ -197,9 +197,9 @@ result_create = compute_client.virtual_machine_scale_sets.create_or_update(
 vmss_result = result_create.result()
 ``` 
 
-## <a name="other-operations-with-managed-disks"></a><span data-ttu-id="f51ca-130">可对托管磁盘执行的其他操作</span><span class="sxs-lookup"><span data-stu-id="f51ca-130">Other Operations with Managed Disks</span></span>
+## <a name="other-operations-with-managed-disks"></a><span data-ttu-id="c234d-130">可对托管磁盘执行的其他操作</span><span class="sxs-lookup"><span data-stu-id="c234d-130">Other Operations with Managed Disks</span></span>
 
-### <a name="resizing-a-managed-disk"></a><span data-ttu-id="f51ca-131">调整托管磁盘的大小。</span><span class="sxs-lookup"><span data-stu-id="f51ca-131">Resizing a managed disk.</span></span>
+### <a name="resizing-a-managed-disk"></a><span data-ttu-id="c234d-131">调整托管磁盘的大小。</span><span class="sxs-lookup"><span data-stu-id="c234d-131">Resizing a managed disk.</span></span>
 
 ```python
 managed_disk = compute_client.disks.get('my_resource_group', 'myDisk')
@@ -212,7 +212,7 @@ async_update = self.compute_client.disks.create_or_update(
 async_update.wait()
 ```
 
-### <a name="update-the-storage-account-type-of-the-managed-disks"></a><span data-ttu-id="f51ca-132">更新托管磁盘的存储帐户类型。</span><span class="sxs-lookup"><span data-stu-id="f51ca-132">Update the Storage Account type of the Managed Disks.</span></span>
+### <a name="update-the-storage-account-type-of-the-managed-disks"></a><span data-ttu-id="c234d-132">更新托管磁盘的存储帐户类型。</span><span class="sxs-lookup"><span data-stu-id="c234d-132">Update the Storage Account type of the Managed Disks.</span></span>
 ```python
 from azure.mgmt.compute.models import StorageAccountTypes
 
@@ -226,7 +226,7 @@ async_update = self.compute_client.disks.create_or_update(
 async_update.wait()
 ```
 
-### <a name="create-an-image-from-blob-storage"></a><span data-ttu-id="f51ca-133">从 Blob 存储创建映像。</span><span class="sxs-lookup"><span data-stu-id="f51ca-133">Create an image from Blob Storage.</span></span>
+### <a name="create-an-image-from-blob-storage"></a><span data-ttu-id="c234d-133">从 Blob 存储创建映像。</span><span class="sxs-lookup"><span data-stu-id="c234d-133">Create an image from Blob Storage.</span></span>
 ```python
 async_create_image = compute_client.images.create_or_update(
     'my_resource_group',
@@ -246,7 +246,7 @@ async_create_image = compute_client.images.create_or_update(
 image = async_create_image.result()
 ```
 
-### <a name="create-a-snapshot-of-a-managed-disk-that-is-currently-attached-to-a-virtual-machine"></a><span data-ttu-id="f51ca-134">创建当前已附加到虚拟机的托管磁盘的快照。</span><span class="sxs-lookup"><span data-stu-id="f51ca-134">Create a snapshot of a Managed Disk that is currently attached to a Virtual Machine.</span></span>
+### <a name="create-a-snapshot-of-a-managed-disk-that-is-currently-attached-to-a-virtual-machine"></a><span data-ttu-id="c234d-134">创建当前已附加到虚拟机的托管磁盘的快照。</span><span class="sxs-lookup"><span data-stu-id="c234d-134">Create a snapshot of a Managed Disk that is currently attached to a Virtual Machine.</span></span>
 ```python
 managed_disk = compute_client.disks.get('my_resource_group', 'myDisk')
 async_snapshot_creation = self.compute_client.snapshots.create_or_update(
