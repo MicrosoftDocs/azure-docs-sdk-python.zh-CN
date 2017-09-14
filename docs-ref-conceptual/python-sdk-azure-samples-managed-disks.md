@@ -10,11 +10,11 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
 ms.author: liwong
-ms.openlocfilehash: 776e13ed91482c34e5d637d5eedf2640cd4ca9f4
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 4154367f0449b174790ee3f3c9480ca0bceeea87
+ms.sourcegitcommit: c6d9500492131bf782488fcafc7c5c41c2703e92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="managed-disks"></a>托管磁盘
 
@@ -114,7 +114,7 @@ managed_disk = compute_client.disks.get('my_resource_group', 'myDisk')
 vm.storage_profile.data_disks.append({
     'lun': 12, # You choose the value, depending of what is available for you
     'name': managed_disk.name,
-    'create_option': DiskCreateOption.attach,
+    'create_option': DiskCreateOptionTypes.attach,
     'managed_disk': {
         'id': managed_disk.id
     }
