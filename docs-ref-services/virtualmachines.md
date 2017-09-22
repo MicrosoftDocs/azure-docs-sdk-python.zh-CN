@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: compute
-ms.openlocfilehash: e2f2ad4e42bd847c9286333bacd583c3cd3f1b8c
-ms.sourcegitcommit: 79afc8a1b427e26ecea7bdc0b7b3c898f143360f
+ms.openlocfilehash: c4128dae1c1fd47d2ac34b178b7e1031aa14c948
+ms.sourcegitcommit: 1229121faaae8536a7d8cc89cddd24abf1e30cb8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 虚拟机库
 
@@ -77,16 +77,18 @@ def create_vm()
 
 * [管理虚拟机][1]
 * [使用托管服务标识 (MSI) 进行身份验证][2]
-* [管理负载均衡器][3]
-* [创建和配置托管磁盘][4]
-* [列出映像][5] 
-* [监视虚拟机][6]
+* [使用托管服务标识扩展创建虚拟机][3]
+* [管理负载均衡器][4]
+* [创建和配置托管磁盘][5]
+* [列出映像][6] 
+* [监视虚拟机][7]
 
 查看虚拟机示例的[完整列表](https://azure.microsoft.com/resources/samples/?platform=python&term=virtual-machines)。
 
 [1]: https://azure.microsoft.com/resources/samples/virtual-machines-python-manage/
 [2]: https://github.com/Azure-Samples/resource-manager-python-manage-resources-with-msi
-[3]: https://azure.microsoft.com/resources/samples/network-python-manage-loadbalancer
-[4]: ../docs-ref-conceptual/python-sdk-azure-samples-managed-disks.md
-[5]: ../docs-ref-conceptual/python-sdk-azure-samples-list-images.md
-[6]: ../docs-ref-conceptual/python-sdk-azure-samples-monitor-vms.md
+[3]: https://github.com/Azure-Samples/compute-python-msi-vm
+[4]: https://azure.microsoft.com/resources/samples/network-python-manage-loadbalancer
+[5]: ../docs-ref-conceptual/python-sdk-azure-samples-managed-disks.md
+[6]: ../docs-ref-conceptual/python-sdk-azure-samples-list-images.md
+[7]: ../docs-ref-conceptual/python-sdk-azure-samples-monitor-vms.md
