@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: f341e9066f48b35e182b4aba52b2f69e2b33e984
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: d8a27bc2b5480b07728a0b3f892f5c3c70c913d9
+ms.sourcegitcommit: 427b44319ae99bf19e167f427e7681b2103dd8e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="azure-resources-libraries-for-python"></a>用于 Python 的 Azure 资源库
 
@@ -42,7 +42,7 @@ resource_client.resource_groups.create_or_update(GROUP_NAME, {'location': LOCATI
 ```
 
 > [!div class="nextstepaction"]
-> [了解管理 API](/python/api/overview/azure/resources/managementlibrary)
+> [了解管理 API](/python/api/overview/azure/azure.mgmt.resource)
 
 ## <a name="samples"></a>示例
 [管理 Azure 资源和资源组](https://github.com/Azure-Samples/resource-manager-python-resources-and-groups)
