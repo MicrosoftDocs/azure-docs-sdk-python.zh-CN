@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 51cdf73060caeb74c587d932eb70c3fd3a2d3b71
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 04aeb24f5ed294f5862e2e1f1bc6319c317bb157
+ms.sourcegitcommit: cd2d097f5e91aae1eb1cd5a238d3b49ac427fd64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 10/26/2017
 ---
 # <a name="azure-monitoring-libraries-for-python"></a>用于 Python 的 Azure 监视库
 
@@ -24,13 +24,13 @@ ms.lasthandoff: 08/18/2017
 
 在[此处](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)详细了解 Azure Monitor。 
 
-## <a name="client"></a>客户端
+## <a name="installation"></a>安装
 ```bash
-pip install azure-monitor
+pip install azure-mgmt-monitor
 ```
 
-### <a name="example"></a>示例
-此示例获取 Azure 上的资源（VM 等）的指标。 
+## <a name="example---metrics"></a>示例 - 指标
+此示例获取 Azure 上的资源（VM 等）的指标。 此示例至少需要 Python 程序包的 0.4.0 版。
 
 [此处](https://msdn.microsoft.com/library/azure/mt743622.aspx)提供了筛选器可用关键字的完整列表。
 
@@ -38,7 +38,7 @@ pip install azure-monitor
 
 ```python
 import datetime
-from azure.monitor import MonitorClient
+from azure.mgmt.monitor import MonitorManagementClient
 
 # Get the ARM id of your resource. You might chose to do a "get"
 # using the according management or to build the URL directly
@@ -50,7 +50,7 @@ resource_id = (
 ).format(subscription_id, resource_group_name, vm_name)
 
 # create client
-client = MonitorClient(
+client = MonitorManagementClient(
     credentials,
     subscription_id
 )
@@ -78,25 +78,21 @@ for metric in client.metric_definitions.list(resource_id):
 today = datetime.datetime.now().date()
 yesterday = today - datetime.timedelta(days=1)
 
-filter = " and ".join([
-    "name.value eq 'Percentage CPU'",
-    "aggregationType eq 'Total'",
-    "startTime eq {}".format(yesterday),
-    "endTime eq {}".format(today),
-    "timeGrain eq duration'PT1H'"
-])
-
 metrics_data = client.metrics.list(
     resource_id,
-    filter=filter
+    timespan="{}/{}".format(yesterday, today),
+    interval='PT1H',
+    metric='Percentage CPU',
+    aggregation='Total'
 )
 
-for item in metrics_data:
-    # azure.monitor.models.Metric
+for item in metrics_data.value:
+    # azure.mgmt.monitor.models.Metric
     print("{} ({})".format(item.name.localized_value, item.unit.name))
-    for data in item.data:
-        # azure.monitor.models.MetricData
-        print("{}: {}".format(data.time_stamp, data.total))
+    for timeserie in item.timeseries:
+        for data in timeserie.data:
+            # azure.mgmt.monitor.models.MetricData
+            print("{}: {}".format(data.time_stamp, data.total))
 
 # Example of result:
 # Percentage CPU (percent)
@@ -109,15 +105,8 @@ for item in metrics_data:
 # 2016-11-16 06:00:00+00:00: 114.9
 # 2016-11-16 07:00:00+00:00: 45.4
 ```
-> [!div class="nextstepaction"]
-> [了解客户端 API](/python/api/overview/azure/monitoring/clientlibrary)
 
-## <a name="mangement-api"></a>管理 API
-```bash
-pip install azure-mgmt-monitor
-```
-
-### <a name="example"></a>示例
+## <a name="example---alerts"></a>示例 - 警报
 此示例演示如何在创建资源时自动对资源设置警报，确保正确监视所有资源。
 
 在 VM 上创建一个数据源用于针对 CPU 使用率发出警报：
@@ -132,7 +121,7 @@ resource_id = (
 ).format(self.settings.SUBSCRIPTION_ID)
 
 # create client
-monitor_mgmt_client = MonitorMgmtClient(
+client = MonitorMgmtClient(
     credentials,
     subscription_id
 )
@@ -173,7 +162,7 @@ rule_action = RuleEmailAction(
 创建警报：
 ```python
 rule_name = 'MyPyTestAlertRule'
-my_alert = monitor_mgmt_client.alert_rules.create_or_update(
+my_alert = client.alert_rules.create_or_update(
     group_name,
     rule_name,
     {
