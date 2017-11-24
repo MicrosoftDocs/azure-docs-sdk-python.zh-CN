@@ -60,9 +60,9 @@ sections:
             title: 将第一个 Web 应用部署到 Azure
             href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-python'
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/PostgreSQL.svg'
-            title: 将应用连接到 Azure PostgreSQL 数据库
-            href: 'https://docs.microsoft.com/azure/postgresql/connect-python'
+              src: 'https://docs.microsoft.com/azure/media/index/API_Face.svg'
+            title: 人脸 API 入门
+            href: 'https://docs.microsoft.com/azure/cognitive-services/face/tutorials/faceapiinpythontutorial'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/cosmosdb.svg'
             title: 使用 Cosmos DB 构建 Web 应用
