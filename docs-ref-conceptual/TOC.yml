@@ -6,7 +6,7 @@
     - name: 工具
       href: python-azure-tools.md
     - name: Python 模块入门
-      href: python-sdk-azure-get-started.md
+      href: python-sdk-azure-get-started.yml
     - name: 身份验证
       href: python-sdk-azure-authenticate.md
     - name: 快速入门
