@@ -1,5 +1,4 @@
-### YamlMime:YamlDocument
-documentType: Tutorial
+### YamlMime:Tutorial
 title: "使用用于 Python 的 Azure 库开始云开发"
 metadata:
   title: "用于 Python 的 Azure 库入门"
@@ -10,13 +9,13 @@ metadata:
   nextTutorialTitle: "Python SDK 参考"
   displayType: two-column
   interactive: azurecli
-  ms.openlocfilehash: 103dd9fa8307f8f71eab6d219e8a2dad28ba94f0
-  ms.sourcegitcommit: 932b476b0f0c4c6613a4bdc1b0b96e6ce4ba8fcb
+  ms.openlocfilehash: 23e29f3a4fde678e6b8973f3f7baca0f2afb1cde
+  ms.sourcegitcommit: 5ab15a7214082d16f339a13e4ae7735b3a57a9aa
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 12/14/2017
+  ms.lasthandoff: 01/18/2018
 items:
-- durationInMinutes: 
+- durationInMinutes: 1
   content: "本指南演示多个用于 Python 的 Azure 库的用法。  \n"
 - title: "先决条件"
   durationInMinutes: 5
