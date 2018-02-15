@@ -11,15 +11,15 @@ ms.technology: azure
 ms.devlang: python
 ms.service: multiple
 ms.assetid: 
-ms.openlocfilehash: 7c069f849007ea2c02cf4347ce213dd033dcd68b
-ms.sourcegitcommit: c57305dad01cad925faf50a64953c408429d4ca9
+ms.openlocfilehash: e0c7b4acd1aa57d141f4407c0ba483a1529d2b35
+ms.sourcegitcommit: 97e5d660eb4a006f969c3010087e1386cc6eb482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="azure-libraries-for-python"></a>用于 Python 的 Azure 库
 
-借助用于 Python 的 Azure 库可以通过应用程序代码使用 Azure 服务和管理 Azure 资源。 这些库在 [PyPI](python-sdk-azure-install.md) 在中提供，方便在 Python 项目中使用。
+借助用于 Python 的 Azure 库可以通过应用程序代码使用 Azure 服务和管理 Azure 资源。 
 
 ## <a name="manage-azure-resources"></a>管理 Azure 资源
 
@@ -45,7 +45,7 @@ server = sql_client.servers.create_or_update(
 )
 ```
 
-查看[安装说明](python-sdk-azure-install.md)了解库的完整列表以及如何将其导入项目，然后阅读[入门文章](python-sdk-azure-get-started.yml)来设置身份验证并针对自己的 Azure 订阅运行示例代码。
+查看[安装说明](/azure/python-how-to-install)了解库的完整列表以及如何将其导入项目，然后阅读[入门文章](python-sdk-azure-get-started.yml)来设置身份验证并针对自己的 Azure 订阅运行示例代码。
 
 ## <a name="connect-to-azure-services"></a>连接到 Azure 服务
 

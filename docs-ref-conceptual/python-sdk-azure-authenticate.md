@@ -10,11 +10,11 @@ ms.topic: article
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 5c4cf1dee7d9864e809f2797ad49ce78886a6f66
-ms.sourcegitcommit: c57305dad01cad925faf50a64953c408429d4ca9
+ms.openlocfilehash: 271722eee1ef982d1f091b3d3af29069917f3e17
+ms.sourcegitcommit: 97e5d660eb4a006f969c3010087e1386cc6eb482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="authenticate-with-the-azure-management-libraries-for-python"></a>使用用于 Python 的 Azure 管理库进行身份验证
 
@@ -118,7 +118,7 @@ client = ComputeManagementClient(credentials, subscription_id)
 > [NOTE!] 如果使用 Azure 主权云，还必须在创建管理客户端时指定相应的基 URL（通过 `msrestazure.azure_cloud` 中的常量）。 例如，对于 Azure 中国云：
 > ```python
 > client = ComputeManagementClient(credentials, subscription_id,
->     base_url=AZURE_CHINA_CLOUD.endpoints.active_directory_resource_id)
+>     base_url=AZURE_CHINA_CLOUD.endpoints.resource_manager)
 > ```
 
 
