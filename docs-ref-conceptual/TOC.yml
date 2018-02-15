@@ -3,6 +3,8 @@
   items:
     - name: 概述
       href: python-sdk-azure-overview.md
+    - name: 安装
+      href: /azure/python-how-to-install
     - name: 工具
       href: python-azure-tools.md
     - name: Python 模块入门
