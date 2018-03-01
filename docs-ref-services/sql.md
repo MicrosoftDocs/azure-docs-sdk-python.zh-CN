@@ -8,11 +8,11 @@ ms.date: 01/09/2018
 ms.topic: reference
 ms.devlang: python
 ms.service: sql-database
-ms.openlocfilehash: baa0e53a77d18dc93241135b5b0fecff5786114c
-ms.sourcegitcommit: ab96bcebe9d5bfa5f32ec5a61b79bd7483fadcad
+ms.openlocfilehash: 6c442a7a1e639938c993e8c1e6f74bc5e0a730b7
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-sql-database-libraries-for-python"></a>用于 Python 的 Azure SQL 数据库库
 
@@ -61,7 +61,7 @@ while row:
 
 pyodbc 使用其他 ORM（例如 [SQLAlchemy](http://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) 和 [Django](https://github.com/lionheart/django-pyodbc/)）。 
 
-## <a name="management-apipythonapioverviewazuresqlmanagementlibrary"></a>[管理 API](/python/api/overview/azure/sql/managementlibrary)
+## <a name="management-apipythonapioverviewazuresqlmanagement"></a>[管理 API](/python/api/overview/azure/sql/management)
 
 使用管理 API 在订阅中创建和管理 Azure SQL 数据库资源。 
 
@@ -109,5 +109,5 @@ firewall_rule = sql_client.firewall_rules.create_or_update(
 )
 ```
 > [!div class="nextstepaction"]
-> [了解管理 API](/python/api/overview/azure/sql/managementlibrary)
+> [了解管理 API](/python/api/overview/azure/sql/management)
 
