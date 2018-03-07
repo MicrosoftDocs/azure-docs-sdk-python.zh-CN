@@ -2,30 +2,83 @@
 title: "用于 Python 的 Azure 计划程序库"
 description: "用于 Python 的 Azure 计划程序库参考"
 keywords: "Azure, python, SDK, API, 计划程序"
-author: sptramer
-ms.author: sttramer
-manager: douge
-ms.date: 07/10/2017
+author: lisawong19
+ms.author: liwong
+manager: mbaldwin
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 55aeabd7efebeb6663a651277489637ab527c72c
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 3d2691ae1ba84c41f25de2b099aacefaa92152ed
+ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="azure-scheduler-libraries-for-python"></a>用于 Python 的 Azure 计划程序库
 
 ## <a name="install-the-libraries"></a>安装库
 
-
-### <a name="management"></a>管理
+## <a name="management"></a>管理
 
 ```bash
 pip install azure-mgmt-scheduler
 ```
+## <a name="example"></a>示例
+
+### <a name="create-the-management-client"></a>创建管理客户端
+
+以下代码创建管理客户端的实例。
+
+你需要提供可以从[订阅列表](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping)检索的 ``subscription_id``。
+
+有关使用 Python SDK 处理 Azure Active Directory 身份验证以及创建 ``Credentials`` 实例的详细信息，请参阅[资源管理身份验证](/python/azure/python-sdk-azure-authenticate)。
+
+```python
+from azure.mgmt.scheduler import SchedulerManagementClient
+from azure.common.credentials import UserPassCredentials
+
+# Replace this with your subscription id
+subscription_id = '33333333-3333-3333-3333-333333333333'
+
+# See above for details on creating different types of AAD credentials
+credentials = UserPassCredentials(
+    'user@domain.com',  # Your user
+    'my_password',      # Your password
+)
+
+scheduler_client = SchedulerManagementClient(
+    credentials,
+    subscription_id
+)
+```
+
+### <a name="create-a-job-collection"></a>创建作业集合
+
+下面的代码在现有的资源组下创建作业集合。
+若要创建或管理资源组，请参阅[资源管理](/python/api/overview/azure/azure.mgmt.resource)。
+
+```python
+from azure.mgmt.scheduler.models import JobCollectionDefinition, JobCollectionProperties, Sku
+
+group_name = 'myresourcegroup'
+job_collection_name = "myjobcollection"
+scheduler_client.job_collections.create_or_update(
+    group_name,
+    job_collection_name,
+    JobCollectionDefinition(
+        location = "West US",
+        properties = JobCollectionProperties(
+            sku = Sku(
+                name="Free"
+            )
+        )
+    )
+)
+# scheduler_client is a JobCollectionDefinition instance
+```
+
 > [!div class="nextstepaction"]
-> [了解管理 API](/python/api/overview/azure/scheduler/managementlibrary)
+> [了解管理 API](/python/api/overview/azure/scheduler/management)
