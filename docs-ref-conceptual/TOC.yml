@@ -11,6 +11,8 @@
       href: python-sdk-azure-get-started.yml
     - name: 身份验证
       href: python-sdk-azure-authenticate.md
+    - name: 操作配置
+      href: python-sdk-azure-operation-config.md
     - name: 快速入门
       items:
         - name: Web 应用

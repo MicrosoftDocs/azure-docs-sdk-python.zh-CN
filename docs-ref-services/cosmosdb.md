@@ -1,27 +1,27 @@
 ---
-title: "用于 Python 的 Azure CosmosDB 库"
-description: "用于 CosmosDB 的 Python 客户端库的参考文档"
-keywords: "Azure, Python, SDK, API, SQL, 数据库, PostGres,CosmosDB, NoSQL"
+title: 用于 Python 的 Azure Cosmos DB 库
+description: 用于 Azure Cosmos DB 的 Python 客户端库的参考文档
+keywords: Azure, Python, SDK, API, SQL, 数据库, PostGres, Cosmos DB, NoSQL
 author: lisawong19
 ms.author: liwong
 manager: douge
-ms.date: 08/11/2017
+ms.date: 03/20/2018
 ms.topic: article
 ms.devlang: python
 ms.service: cosmosdb
-ms.openlocfilehash: d56dd69f4fc4513034046f9f721608ad94ff5cfe
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 391b556ece7d818406fa501763814eb7f0d50d22
+ms.sourcegitcommit: 41e6e6b5469271f4ec497a322b460e2a2af2c73d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="azure-cosmosdb-libraries-for-python"></a>用于 Python 的 Azure CosmosDB 库
+# <a name="azure-cosmos-db-libraries-for-python"></a>用于 Python 的 Azure Cosmos DB 库
 
 ## <a name="overview"></a>概述
 
-在 Python 应用程序中使用 CosmosDB，以便在 NoSQL 数据存储中存储和查询 JSON 文档。
+在 Python 应用程序中使用 Azure Cosmos DB，以便在 NoSQL 数据存储中存储和查询 JSON 文档。
 
-详细了解 [Azure CosmosDB](https://docs.microsoft.com/azure/cosmos-db/introduction)。
+了解有关 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) 的详细信息。
 
 ## <a name="client-library"></a>客户端库
  ```bash
@@ -35,13 +35,13 @@ pip install azure-mgmt-cosmosdb
 
 ### <a name="example"></a>示例
 
-在使用类似于 SQL 的查询接口在 CosmosDB 中查找匹配的文档：
+使用类似于 SQL 的查询接口在 Azure CosmosDB 中查找匹配的文档：
 
 ```python
 import pydocumentdb
 import pydocumentdb.document_client as document_client
 
-# Initialize the Python DocumentDB client
+# Initialize the Python Azure Cosmos DB client
 client = document_client.DocumentClient(config['ENDPOINT'], {'masterKey': config['MASTERKEY']})
 # Create a database
 db = client.CreateDatabase({ 'id': config['DOCUMENTDB_DATABASE'] })
@@ -83,6 +83,6 @@ print(results)
 
 ## <a name="samples"></a>示例
 
-[使用 Azure Cosmos DB 的 DocumentDB API 开发 Python 应用](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-python-getting-started/)
+[使用 Azure Cosmos DB 开发 Python 应用](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-python-getting-started/)
 
 
