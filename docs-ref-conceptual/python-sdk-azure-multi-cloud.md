@@ -1,6 +1,6 @@
 ---
-title: "多云"
-description: "在所有区域上使用 Azure"
+title: 多云
+description: 在所有区域上使用 Azure
 author: lmazuel
 ms.author: lmazuel
 manager: routlaw
@@ -8,11 +8,11 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 48c6cc1872ef985641efc957a78e4b489f27ab56
-ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
+ms.openlocfilehash: 6d2ba0580f8b6dda857b48ed5235a8c969a051f5
+ms.sourcegitcommit: 7066ace94076483bae7d54172605f431e47bd5ee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="multi-cloud---use-azure-on-all-regions"></a>多云 - 在所有区域上使用 Azure
 
@@ -87,7 +87,7 @@ from azure.mgmt.resource import ResourceManagementClient
 # Service Principal
 tenant = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
 client_id = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-password = 'password
+password = 'password'
 
 # Public Azure - default values
 authentication_endpoint = 'https://login.microsoftonline.com/'
@@ -109,7 +109,7 @@ resource_client = ResourceManagementClient(
 )
 ```
 
-### <a name="azure-government"></a>Azure 政府
+### <a name="azure-government"></a>Azure Government 
 ```python
 import adal
 from msrestazure.azure_active_directory import AdalAuthentication
@@ -118,7 +118,7 @@ from azure.mgmt.resource import ResourceManagementClient
 # Service Principal
 tenant = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
 client_id = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-password = 'password
+password = 'password'
 
 # Government
 authentication_endpoint = 'https://login-us.microsoftonline.com/'
@@ -140,7 +140,7 @@ resource_client = ResourceManagementClient(
 )
 ```
 
-### <a name="azure-germany"></a>Azure 德国
+### <a name="azure-germany"></a>Azure Germany
 ```python
 import adal
 from msrestazure.azure_active_directory import AdalAuthentication
@@ -149,7 +149,7 @@ from azure.mgmt.resource import ResourceManagementClient
 # Service Principal
 tenant = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
 client_id = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-password = 'password
+password = 'password'
 
 # Azure Germany
 authentication_endpoint = 'https://login.microsoftonline.de/'
@@ -180,7 +180,7 @@ from azure.mgmt.resource import ResourceManagementClient
 # Service Principal
 tenant = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
 client_id = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-password = 'password
+password = 'password'
 
 # Azure China
 authentication_endpoint = 'https://login.chinacloudapi.cn/'
