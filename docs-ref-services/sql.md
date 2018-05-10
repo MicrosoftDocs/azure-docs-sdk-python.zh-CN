@@ -1,6 +1,6 @@
 ---
-title: "用于 Python 的 Azure SQL 数据库库"
-description: "使用 ODBC 驱动程序和 pyodbc 连接到 Azure SQL 数据库，或者使用管理 API 来管理 Azure SQL 实例。"
+title: 用于 Python 的 Azure SQL 数据库库
+description: 使用 ODBC 驱动程序和 pyodbc 连接到 Azure SQL 数据库，或者使用管理 API 来管理 Azure SQL 实例。
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -8,11 +8,11 @@ ms.date: 01/09/2018
 ms.topic: reference
 ms.devlang: python
 ms.service: sql-database
-ms.openlocfilehash: 6c442a7a1e639938c993e8c1e6f74bc5e0a730b7
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 5b73977fb58ed3cb17d675784da921b0e199d165
+ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="azure-sql-database-libraries-for-python"></a>用于 Python 的 Azure SQL 数据库库
 
@@ -76,9 +76,16 @@ pip install azure-mgmt-resource
 创建 SQL 数据库资源，并使用防火墙规则限制对 IP 地址范围的访问。
 
 ```python
+from azure.common.client_factory import get_client_from_cli_profile
+from azure.mgmt.resource import ResourceManagementClient
+from azure.mgmt.sql import SqlManagementClient
+
 RESOURCE_GROUP = 'YOUR_RESOURCE_GROUP_NAME'
 LOCATION = 'eastus'  # example Azure availability zone, should match resource group
+SQL_SERVER = 'yourvirtualsqlserver'
 SQL_DB = 'YOUR_SQLDB_NAME'
+USERNAME = 'YOUR_USERNAME'
+PASSWORD = 'YOUR_PASSWORD'
 
 # create resource client
 resource_client = get_client_from_cli_profile(ResourceManagementClient)
@@ -90,7 +97,7 @@ sql_client = get_client_from_cli_profile(SqlManagementClient)
 # Create a SQL server
 server = sql_client.servers.create_or_update(
     RESOURCE_GROUP,
-    SQL_DB,
+    SQL_SERVER,
     {
         'location': LOCATION,
         'version': '12.0', # Required for create
@@ -99,9 +106,22 @@ server = sql_client.servers.create_or_update(
     }
 )
 
+# Create a SQL database in the Basic tier
+database = sql_client.databases.create_or_update(
+    RESOURCE_GROUP,
+    SQL_SERVER,
+    SQL_DB,
+    {
+        'location': LOCATION,
+        'collation': 'SQL_Latin1_General_CP1_CI_AS',
+        'create_mode': 'default',
+        'requested_service_objective_name': 'Basic'
+    }
+)
+
 # Open access to this server for IPs
 firewall_rule = sql_client.firewall_rules.create_or_update(
-    RESOURCE_GROUP
+    RESOURCE_GROUP,
     SQL_DB,
     "firewall_rule_name_123.123.123.123",
     "123.123.123.123", # Start ip range
