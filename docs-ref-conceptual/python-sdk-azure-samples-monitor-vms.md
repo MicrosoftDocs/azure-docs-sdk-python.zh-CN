@@ -1,8 +1,8 @@
-# <a name="azure-monitor"></a><span data-ttu-id="9bc5b-101">Azure 监视器</span><span class="sxs-lookup"><span data-stu-id="9bc5b-101">Azure Monitor</span></span>
+# <a name="azure-monitor"></a>Azure 监视器
 
-<span data-ttu-id="9bc5b-102">此示例获取 Azure 上的资源（VM 等）的指标。</span><span class="sxs-lookup"><span data-stu-id="9bc5b-102">This sample get the metrics of a resource on Azure (VMs, etc.).</span></span>
+此示例获取 Azure 上的资源（VM 等）的指标。
 
-<span data-ttu-id="9bc5b-103">[此处](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)提供了筛选器可用关键字的完整列表</span><span class="sxs-lookup"><span data-stu-id="9bc5b-103">A complete list of available keywords for filters is available [here](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)</span></span>
+[此处](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)提供了筛选器可用关键字的完整列表
 
 ```python
 import datetime
