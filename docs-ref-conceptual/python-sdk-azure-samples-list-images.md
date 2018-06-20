@@ -1,9 +1,9 @@
 ---
-title: "列出映像"
-description: "列显所有可用于创建虚拟机的映像。"
+title: 列出映像
+description: 列显所有可用于创建虚拟机的映像。
 author: lisawong19
 manager: douge
-ms.assetid: 
+ms.assetid: ''
 ms.devlang: python
 ms.topic: article
 ms.service: Azure
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909030"
 ---
 # <a name="list-images"></a><span data-ttu-id="265d1-103">列出映像</span><span class="sxs-lookup"><span data-stu-id="265d1-103">List images</span></span>
 

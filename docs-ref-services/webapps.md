@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的 Azure Web 应用库"
-description: 
-keywords: "Azure, Python, SDK, API, web 应用, 应用服务"
+title: 用于 Python 的 Azure Web 应用库
+description: ''
+keywords: Azure, Python, SDK, API, web 应用, 应用服务
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479220"
 ---
 # <a name="azure-web-apps-libraries-for-python"></a><span data-ttu-id="23886-103">用于 Python 的 Azure Web 应用库</span><span class="sxs-lookup"><span data-stu-id="23886-103">Azure Web Apps libraries for Python</span></span>
 

@@ -1,6 +1,6 @@
 ---
-title: "用于 Python 的 Azure Data Lake Store 库"
-description: "用于 Python 的 Azure Data Lake Store 库参考"
+title: 用于 Python 的 Azure Data Lake Store 库
+description: 用于 Python 的 Azure Data Lake Store 库参考
 keywords: Azure, python, SDK, API, Data Lake Store
 author: sptramer
 ms.author: sttramer
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479030"
 ---
 # <a name="azure-data-lake-store-libraries-for-python"></a><span data-ttu-id="6f405-104">用于 Python 的 Azure Data Lake Store 库</span><span class="sxs-lookup"><span data-stu-id="6f405-104">Azure Data Lake Store libraries for python</span></span>
 

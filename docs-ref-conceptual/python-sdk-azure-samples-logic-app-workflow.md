@@ -1,9 +1,9 @@
 ---
-title: "创建逻辑应用工作流"
-description: "创建逻辑应用工作流"
+title: 创建逻辑应用工作流
+description: 创建逻辑应用工作流
 author: lisawong19
 manager: douge
-ms.assetid: 
+ms.assetid: ''
 ms.devlang: python
 ms.topic: article
 ms.service: Azure
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909060"
 ---
 # <a name="create-a-logic-app-workflow"></a><span data-ttu-id="ede7e-103">创建逻辑应用工作流</span><span class="sxs-lookup"><span data-stu-id="ede7e-103">Create a Logic App Workflow</span></span>
 

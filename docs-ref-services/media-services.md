@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的 Azure 媒体服务库"
-description: "用于 Python 的 Azure 媒体服务库参考"
-keywords: "Azure, Python, SDK, API, 媒体服务"
+title: 用于 Python 的 Azure 媒体服务库
+description: 用于 Python 的 Azure 媒体服务库参考
+keywords: Azure, Python, SDK, API, 媒体服务
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479190"
 ---
 # <a name="azure-media-services-libraries-for-python"></a><span data-ttu-id="7a495-104">用于 Python 的 Azure 媒体服务库</span><span class="sxs-lookup"><span data-stu-id="7a495-104">Azure Media Services libraries for python</span></span>
 

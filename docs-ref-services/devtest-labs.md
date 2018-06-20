@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的 Azure 开发测试实验室库"
-description: "用于 Python 的 Azure 开发测试实验室库参考"
-keywords: "Azure, python, SDK, API, 开发测试实验室"
+title: 用于 Python 的 Azure 开发测试实验室库
+description: 用于 Python 的 Azure 开发测试实验室库参考
+keywords: Azure, python, SDK, API, 开发测试实验室
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -16,6 +16,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551570"
 ---
 # <a name="azure-devtest-labs-libraries-for-python"></a><span data-ttu-id="9ed8c-104">用于 Python 的 Azure 开发测试实验室库</span><span class="sxs-lookup"><span data-stu-id="9ed8c-104">Azure DevTest Labs libraries for python</span></span>
 

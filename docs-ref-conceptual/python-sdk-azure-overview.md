@@ -1,6 +1,6 @@
 ---
-title: "用于 Python 的 Azure 库"
-description: "用于 Python 的 Azure 管理和服务库概述"
+title: 用于 Python 的 Azure 库
+description: 用于 Python 的 Azure 管理和服务库概述
 keywords: Azure, Python, SDK, API
 author: lisawong19
 ms.author: liwong
@@ -10,12 +10,13 @@ ms.topic: article
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.assetid: 
+ms.assetid: ''
 ms.openlocfilehash: 2b3e6d31edd7b946664853b3478e22205ab8c92e
 ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478800"
 ---
 # <a name="azure-libraries-for-python"></a><span data-ttu-id="2815d-104">用于 Python 的 Azure 库</span><span class="sxs-lookup"><span data-stu-id="2815d-104">Azure libraries for Python</span></span>
 
