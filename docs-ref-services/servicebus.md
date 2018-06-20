@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的服务总线库"
-description: "用于服务总线的 Python 客户端和管理库的参考文档"
-keywords: "Azure, Python, SDK, API, 消息传送, pubsub, 发布-订阅, 消息中转站"
+title: 用于 Python 的服务总线库
+description: 用于服务总线的 Python 客户端和管理库的参考文档
+keywords: Azure, Python, SDK, API, 消息传送, pubsub, 发布-订阅, 消息中转站
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -14,6 +14,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551590"
 ---
 # <a name="service-bus-libraries-for-python"></a>用于 Python 的服务总线库
 

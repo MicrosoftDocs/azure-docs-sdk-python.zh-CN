@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的 Azure 资源库"
-description: 
-keywords: "Azure, Python, SDK, API, 资源"
+title: 用于 Python 的 Azure 资源库
+description: ''
+keywords: Azure, Python, SDK, API, 资源
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909390"
 ---
 # <a name="azure-resources-libraries-for-python"></a>用于 Python 的 Azure 资源库 
 

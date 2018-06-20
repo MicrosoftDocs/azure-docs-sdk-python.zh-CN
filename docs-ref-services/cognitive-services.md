@@ -16,6 +16,7 @@ ms.sourcegitcommit: 61cc12fd4bb1a3ad5f9b79d1c616f005bc21c5d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/06/2018
+ms.locfileid: "30849768"
 ---
 # <a name="azure-cognitive-services-modules-for-python"></a>用于 Python 的 Azure 认知服务模块
 

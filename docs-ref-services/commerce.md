@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的 Azure 商务库"
-description: "用于 Python 的 Azure 商务库参考"
-keywords: "Azure, python, SDK, API, 商务"
+title: 用于 Python 的 Azure 商务库
+description: 用于 Python 的 Azure 商务库参考
+keywords: Azure, python, SDK, API, 商务
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -16,6 +16,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551600"
 ---
 # <a name="azure-commerce-libraries-for-python"></a>用于 Python 的 Azure 商务库
 

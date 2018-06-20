@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的 Azure Active Directory 库"
-description: "Azure Active Directory Python 客户端库的参考文档"
-keywords: "Azure, Python, SDK, API, SQL, 身份验证, AAD, Active Directory , Graph, OAuth 2.0"
+title: 用于 Python 的 Azure Active Directory 库
+description: Azure Active Directory Python 客户端库的参考文档
+keywords: Azure, Python, SDK, API, SQL, 身份验证, AAD, Active Directory , Graph, OAuth 2.0
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478920"
 ---
 # <a name="azure-active-directory-libraries-for-python"></a>用于 Python 的 Azure Active Directory 库
 

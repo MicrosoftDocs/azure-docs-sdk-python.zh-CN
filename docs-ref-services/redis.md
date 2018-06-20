@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的 Azure Redis 库"
-description: "用于 Redis 的 Python 客户端库的参考文档"
-keywords: "Azure, Python, Redis, API, SDK, 数据库, NoSQL"
+title: 用于 Python 的 Azure Redis 库
+description: 用于 Redis 的 Python 客户端库的参考文档
+keywords: Azure, Python, Redis, API, SDK, 数据库, NoSQL
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479240"
 ---
 # <a name="azure-redis-cache-libraries-for-python"></a>用于 Python 的 Azure Redis 缓存库
 

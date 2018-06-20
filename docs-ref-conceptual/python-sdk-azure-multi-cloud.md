@@ -13,6 +13,7 @@ ms.sourcegitcommit: 7066ace94076483bae7d54172605f431e47bd5ee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/05/2018
+ms.locfileid: "30820121"
 ---
 # <a name="multi-cloud---use-azure-on-all-regions"></a>多云 - 在所有区域上使用 Azure
 

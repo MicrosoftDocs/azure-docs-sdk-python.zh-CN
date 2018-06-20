@@ -1,6 +1,6 @@
 ---
-title: "安装"
-description: "如何安装 Azure Python SDK"
+title: 安装
+description: 如何安装 Azure Python SDK
 keywords: Azure, Python, SDK, API
 author: lisawong19
 ms.author: liwong
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 757bf84535fd9d8299c4b51ec92a5ab1926cb671
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/27/2018
+ms.locfileid: "29565816"
 ---
 # <a name="installation"></a>安装
 

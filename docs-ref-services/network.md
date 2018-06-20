@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的 Azure 网络库"
-description: "用于 Python 的 Azure 网络库参考"
-keywords: "Azure, python, SDK, API, 网络"
+title: 用于 Python 的 Azure 网络库
+description: 用于 Python 的 Azure 网络库参考
+keywords: Azure, python, SDK, API, 网络
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479070"
 ---
 # <a name="azure-network-libraries-for-python"></a>用于 Python 的 Azure 网络库
 

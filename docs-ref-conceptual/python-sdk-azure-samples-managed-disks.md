@@ -15,6 +15,7 @@ ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839402"
 ---
 # <a name="managed-disks"></a>托管磁盘
 
