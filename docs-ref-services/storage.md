@@ -1,7 +1,7 @@
 ---
-title: "用于 Python 的 Azure 存储库"
-description: 
-keywords: "Azure, Python, SDK, API, 存储"
+title: 用于 Python 的 Azure 存储库
+description: ''
+keywords: Azure, Python, SDK, API, 存储
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -11,11 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: storage
-ms.openlocfilehash: e00e821ff3e806a994fa8d96aae50c35eeeb8392
-ms.sourcegitcommit: 5ab15a7214082d16f339a13e4ae7735b3a57a9aa
+ms.openlocfilehash: e45b12af9e026e0f6390556813385d86784feaa4
+ms.sourcegitcommit: 86f7f40295271ef94272642efb89b471aae99a2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35720058"
 ---
 # <a name="azure-storage-libraries-for-python"></a>用于 Python 的 Azure 存储库
 
@@ -45,6 +46,8 @@ pip install azure-mgmt-storage
 
 ## <a name="example"></a>示例
 ```python
+from azure.storage.blob import BlockBlobService
+
 blob_service = BlockBlobService(account_name, account_key)
 
 blob_service.create_container(
