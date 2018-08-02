@@ -9,12 +9,12 @@ ms.date: 02/21/2018
 ms.topic: article
 ms.devlang: python
 ms.service: service-bus
-ms.openlocfilehash: 6c0bc66fbe8194b5b8f34ee8e29945b03ba8c242
-ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
+ms.openlocfilehash: 02c172ff1a54d060c6af36a5a5daa5dcbff8795c
+ms.sourcegitcommit: e35ec475d4b9d8061d0528a93aa8e1c4b7db6c0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
-ms.locfileid: "29551590"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39418952"
 ---
 # <a name="service-bus-libraries-for-python"></a>用于 Python 的服务总线库
 
@@ -24,7 +24,7 @@ Microsoft Azure 服务总线支持一组基于云的、面向消息的中间件�
 
 ## <a name="install-the-libraries"></a>安装库
 ```bash
-pip install azure-mgmt-servicebus
+pip install azure-servicebus
 ```
 
 ## <a name="servicebus-queues"></a>服务总线队列
