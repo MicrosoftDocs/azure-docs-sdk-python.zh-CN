@@ -10,25 +10,25 @@ ms.topic: article
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 78b248071e4718c1ab5ad743e697eafcfb510ec5
-ms.sourcegitcommit: 86f7f40295271ef94272642efb89b471aae99a2c
+ms.openlocfilehash: 5011d36f9258fb7c06a8b1d6a689e3b5058360bb
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35720048"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52273043"
 ---
-# <a name="authenticate-with-the-azure-management-libraries-for-python"></a><span data-ttu-id="45b78-104">使用用于 Python 的 Azure 管理库进行身份验证</span><span class="sxs-lookup"><span data-stu-id="45b78-104">Authenticate with the Azure Management Libraries for Python</span></span>
+# <a name="authenticate-with-the-azure-management-libraries-for-python"></a><span data-ttu-id="c360d-104">使用用于 Python 的 Azure 管理库进行身份验证</span><span class="sxs-lookup"><span data-stu-id="c360d-104">Authenticate with the Azure Management Libraries for Python</span></span>
 
-<span data-ttu-id="45b78-105">使用 Python 管理库创建和管理资源时，可借助多个选项在 Azure 中对应用程序进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="45b78-105">Several options are available to authenticate your application with Azure when using the Python management libraries to create and manage resources.</span></span>
+<span data-ttu-id="c360d-105">使用 Python 管理库创建和管理资源时，可借助多个选项在 Azure 中对应用程序进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="c360d-105">Several options are available to authenticate your application with Azure when using the Python management libraries to create and manage resources.</span></span>
 
-## <a name="mgmt-auth-token"></a><span data-ttu-id="45b78-106">使用令牌凭据进行身份验证</span><span class="sxs-lookup"><span data-stu-id="45b78-106">Authenticate with token credentials</span></span>
+## <a name="mgmt-auth-token"></a><span data-ttu-id="c360d-106">使用令牌凭据进行身份验证</span><span class="sxs-lookup"><span data-stu-id="c360d-106">Authenticate with token credentials</span></span>
 
-<span data-ttu-id="45b78-107">请将凭据安全存储在配置文件、注册表或 Azure KeyVault 中。</span><span class="sxs-lookup"><span data-stu-id="45b78-107">Store the credentials securely in a configuration file, the registry, or Azure KeyVault.</span></span>
+<span data-ttu-id="c360d-107">请将凭据安全存储在配置文件、注册表或 Azure KeyVault 中。</span><span class="sxs-lookup"><span data-stu-id="c360d-107">Store the credentials securely in a configuration file, the registry, or Azure KeyVault.</span></span>
 
-<span data-ttu-id="45b78-108">以下示例使用[服务主体](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json)进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="45b78-108">The following example uses a [Service Principal](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json) for authentication.</span></span>
+<span data-ttu-id="c360d-108">以下示例使用[服务主体](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json)进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="c360d-108">The following example uses a [Service Principal](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json) for authentication.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="45b78-109">可以通过 Azure CLI 2.0 创建服务主体</span><span class="sxs-lookup"><span data-stu-id="45b78-109">You can create a Service Principal via the Azure CLI 2.0</span></span>
+> <span data-ttu-id="c360d-109">可以通过 Azure CLI 2.0 创建服务主体</span><span class="sxs-lookup"><span data-stu-id="c360d-109">You can create a Service Principal via the Azure CLI 2.0</span></span>
 > ```bash
 > az ad sp create-for-rbac --name "MY-PRINCIPAL-NAME" --password "STRONG-SECRET-PASSWORD"
 > ```
@@ -52,7 +52,7 @@ ms.locfileid: "35720048"
     )
 ```
 
-> <span data-ttu-id="45b78-110">[NOTE!] 若要连接到 Azure 主权云之一，请使用 `cloud_environment` 参数。</span><span class="sxs-lookup"><span data-stu-id="45b78-110">[NOTE!] To connect to one of the Azure sovereign clouds, use the `cloud_environment` parameter.</span></span>
+> <span data-ttu-id="c360d-110">[NOTE!] 若要连接到 Azure 主权云之一，请使用 `cloud_environment` 参数。</span><span class="sxs-lookup"><span data-stu-id="c360d-110">[NOTE!] To connect to one of the Azure sovereign clouds, use the `cloud_environment` parameter.</span></span>
 
 ```python
     from azure.common.credentials import ServicePrincipalCredentials
@@ -75,7 +75,7 @@ ms.locfileid: "35720048"
     )
 ```
 
-<span data-ttu-id="45b78-111">如需更高的控制度，我们建议使用 [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) 和 SDK ADAL 包装器。</span><span class="sxs-lookup"><span data-stu-id="45b78-111">If you need more control, it is recommended to use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) and the SDK ADAL wrapper.</span></span> <span data-ttu-id="45b78-112">请参阅 ADAL 网站获取所有可用方案的列表和示例。</span><span class="sxs-lookup"><span data-stu-id="45b78-112">Please refer to the ADAL website for all the available scenarios list and samples.</span></span> <span data-ttu-id="45b78-113">服务主体身份验证的示例：</span><span class="sxs-lookup"><span data-stu-id="45b78-113">For instance for service principal authentication:</span></span>
+<span data-ttu-id="c360d-111">如需更高的控制度，我们建议使用 [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) 和 SDK ADAL 包装器。</span><span class="sxs-lookup"><span data-stu-id="c360d-111">If you need more control, it is recommended to use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) and the SDK ADAL wrapper.</span></span> <span data-ttu-id="c360d-112">请参阅 ADAL 网站获取所有可用方案的列表和示例。</span><span class="sxs-lookup"><span data-stu-id="c360d-112">Please refer to the ADAL website for all the available scenarios list and samples.</span></span> <span data-ttu-id="c360d-113">服务主体身份验证的示例：</span><span class="sxs-lookup"><span data-stu-id="c360d-113">For instance for service principal authentication:</span></span>
 
 ```python
     import adal
@@ -103,9 +103,9 @@ ms.locfileid: "35720048"
     )
 ```
 
-<span data-ttu-id="45b78-114">可结合 `AdalAuthentication` 类使用所有 ADAL 有效调用。</span><span class="sxs-lookup"><span data-stu-id="45b78-114">All ADAL valid calls can be used with the `AdalAuthentication` class.</span></span>
+<span data-ttu-id="c360d-114">可结合 `AdalAuthentication` 类使用所有 ADAL 有效调用。</span><span class="sxs-lookup"><span data-stu-id="c360d-114">All ADAL valid calls can be used with the `AdalAuthentication` class.</span></span>
 
-<span data-ttu-id="45b78-115">接下来，创建客户端对象来开始使用 API：</span><span class="sxs-lookup"><span data-stu-id="45b78-115">Next, create a client object to start working with the API:</span></span>
+<span data-ttu-id="c360d-115">接下来，创建客户端对象来开始使用 API：</span><span class="sxs-lookup"><span data-stu-id="c360d-115">Next, create a client object to start working with the API:</span></span>
 
 ```python
 from azure.mgmt.compute import ComputeManagementClient
@@ -116,28 +116,28 @@ subscription_id = '33333333-3333-3333-3333-333333333333'
 client = ComputeManagementClient(credentials, subscription_id)
 ```
 
-> <span data-ttu-id="45b78-116">[NOTE!] 如果使用 Azure 主权云，还必须在创建管理客户端时指定相应的基 URL（通过 `msrestazure.azure_cloud` 中的常量）。</span><span class="sxs-lookup"><span data-stu-id="45b78-116">[NOTE!] When using an Azure sovereign cloud you must also specify the appropriate base URL (via the constants in `msrestazure.azure_cloud`) when creating the management client.</span></span> <span data-ttu-id="45b78-117">例如，对于 Azure 中国云：</span><span class="sxs-lookup"><span data-stu-id="45b78-117">For example for Azure China Cloud:</span></span>
+> <span data-ttu-id="c360d-116">[NOTE!] 如果使用 Azure 主权云，还必须在创建管理客户端时指定相应的基 URL（通过 `msrestazure.azure_cloud` 中的常量）。</span><span class="sxs-lookup"><span data-stu-id="c360d-116">[NOTE!] When using an Azure sovereign cloud you must also specify the appropriate base URL (via the constants in `msrestazure.azure_cloud`) when creating the management client.</span></span> <span data-ttu-id="c360d-117">例如，对于 Azure 中国云：</span><span class="sxs-lookup"><span data-stu-id="c360d-117">For example for Azure China Cloud:</span></span>
 > ```python
 > client = ComputeManagementClient(credentials, subscription_id,
 >     base_url=AZURE_CHINA_CLOUD.endpoints.resource_manager)
 > ```
 
 
-## <a name="mgmt-auth-file"></a><span data-ttu-id="45b78-118">基于文件的身份验证</span><span class="sxs-lookup"><span data-stu-id="45b78-118">File based authentication</span></span>
+## <a name="mgmt-auth-file"></a><span data-ttu-id="c360d-118">基于文件的身份验证</span><span class="sxs-lookup"><span data-stu-id="c360d-118">File based authentication</span></span>
 
-<span data-ttu-id="45b78-119">最简单的身份验证方法是创建包含 Azure 服务主体凭据的 JSON 文件。</span><span class="sxs-lookup"><span data-stu-id="45b78-119">The simplest way to authenticate is to create a JSON file that contains credentials for an Azure Service Principal.</span></span> <span data-ttu-id="45b78-120">可使用以下 CLI 命令同时创建新的服务主体和此文件：</span><span class="sxs-lookup"><span data-stu-id="45b78-120">You can use the following CLI command to create a new Service Principal and this file at the same time:</span></span>
+<span data-ttu-id="c360d-119">最简单的身份验证方法是创建包含 Azure 服务主体凭据的 JSON 文件。</span><span class="sxs-lookup"><span data-stu-id="c360d-119">The simplest way to authenticate is to create a JSON file that contains credentials for an Azure Service Principal.</span></span> <span data-ttu-id="c360d-120">可使用以下 CLI 命令同时创建新的服务主体和此文件：</span><span class="sxs-lookup"><span data-stu-id="c360d-120">You can use the following CLI command to create a new Service Principal and this file at the same time:</span></span>
 
 ```bash
 az ad sp create-for-rbac --sdk-auth > mycredentials.json
 ```
 
-<span data-ttu-id="45b78-121">将此文件保存在系统上可供代码读取的安全位置。</span><span class="sxs-lookup"><span data-stu-id="45b78-121">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="45b78-122">在 shell 中将包含完整路径的环境变量设置为此文件：</span><span class="sxs-lookup"><span data-stu-id="45b78-122">Set an environment variable with the full path to the file in your shell:</span></span>
+<span data-ttu-id="c360d-121">将此文件保存在系统上可供代码读取的安全位置。</span><span class="sxs-lookup"><span data-stu-id="c360d-121">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="c360d-122">在 shell 中将包含完整路径的环境变量设置为此文件：</span><span class="sxs-lookup"><span data-stu-id="c360d-122">Set an environment variable with the full path to the file in your shell:</span></span>
 
 ```bash
 export AZURE_AUTH_LOCATION=~/.azure/azure_credentials.json
 ```
 
-<span data-ttu-id="45b78-123">若要自行创建该文件，请采用以下格式：</span><span class="sxs-lookup"><span data-stu-id="45b78-123">If you want to create the file yourself, please follow this format:</span></span>
+<span data-ttu-id="c360d-123">若要自行创建该文件，请采用以下格式：</span><span class="sxs-lookup"><span data-stu-id="c360d-123">If you want to create the file yourself, please follow this format:</span></span>
 
 ```json
 {
@@ -154,7 +154,7 @@ export AZURE_AUTH_LOCATION=~/.azure/azure_credentials.json
 }
 ```
 
-<span data-ttu-id="45b78-124">然后，可以使用客户端工厂创建任何客户端：</span><span class="sxs-lookup"><span data-stu-id="45b78-124">You can then create any client using the client factory:</span></span>
+<span data-ttu-id="c360d-124">然后，可以使用客户端工厂创建任何客户端：</span><span class="sxs-lookup"><span data-stu-id="c360d-124">You can then create any client using the client factory:</span></span>
 ```python
 from azure.common.client_factory import get_client_from_auth_file
 from azure.mgmt.compute import ComputeManagementClient
@@ -162,8 +162,8 @@ from azure.mgmt.compute import ComputeManagementClient
 client = get_client_from_auth_file(ComputeManagementClient)
 ```
 
-## <a name="mgmt-auth-msi"></a><span data-ttu-id="45b78-125">使用托管服务标识 (MSI) 进行身份验证</span><span class="sxs-lookup"><span data-stu-id="45b78-125">Authenticate with Managed Service Identity(MSI)</span></span> 
-<span data-ttu-id="45b78-126">MSI 是一种简单的方式，通过这种方式，Azure 中的资源无需创建特定凭据即可使用 SDK/CLI。</span><span class="sxs-lookup"><span data-stu-id="45b78-126">MSI is a simple way for a resource in Azure to use SDK/CLI without the need to create specific credentials.</span></span>
+## <a name="mgmt-auth-msi"></a><span data-ttu-id="c360d-125">使用托管服务标识 (MSI) 进行身份验证</span><span class="sxs-lookup"><span data-stu-id="c360d-125">Authenticate with Managed Service Identity(MSI)</span></span> 
+<span data-ttu-id="c360d-126">MSI 是一种简单的方式，通过这种方式，Azure 中的资源无需创建特定凭据即可使用 SDK/CLI。</span><span class="sxs-lookup"><span data-stu-id="c360d-126">MSI is a simple way for a resource in Azure to use SDK/CLI without the need to create specific credentials.</span></span>
 
 ```python
 from msrestazure.azure_active_directory import MSIAuthentication
@@ -181,23 +181,22 @@ from azure.mgmt.resource import ResourceManagementClient, SubscriptionClient
     # Create a Resource Management client
     resource_client = ResourceManagementClient(credentials, subscription_id)
 
-    
+
     # List resource groups as an example. The only limit is what role and policy are assigned to this MSI token.
     for resource_group in resource_client.resource_groups.list():
         print(resource_group.name)
-
 ```
 
-## <a name="mgmt-auth-cli"></a><span data-ttu-id="45b78-127">基于 CLI 的身份验证</span><span class="sxs-lookup"><span data-stu-id="45b78-127">CLI-based authentication</span></span>
+## <a name="mgmt-auth-cli"></a><span data-ttu-id="c360d-127">基于 CLI 的身份验证</span><span class="sxs-lookup"><span data-stu-id="c360d-127">CLI-based authentication</span></span>
 
-<span data-ttu-id="45b78-128">SDK 能够使用 CLI 活动订阅创建客户端。</span><span class="sxs-lookup"><span data-stu-id="45b78-128">The SDK is able to create a client using your CLI active subscription.</span></span>
+<span data-ttu-id="c360d-128">SDK 能够使用 CLI 活动订阅创建客户端。</span><span class="sxs-lookup"><span data-stu-id="c360d-128">The SDK is able to create a client using your CLI active subscription.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="45b78-129">应将此方法用作开发人员快速入门体验。</span><span class="sxs-lookup"><span data-stu-id="45b78-129">This should be used as quick start developer experience.</span></span> <span data-ttu-id="45b78-130">对于生产用途，请使用 [ADAL](#authenticate-with-token-credentials) 或自己的凭据系统。</span><span class="sxs-lookup"><span data-stu-id="45b78-130">For production purposes, use [ADAL](#authenticate-with-token-credentials) or your own credentials system.</span></span>
-> <span data-ttu-id="45b78-131">对 CLI 配置进行任何更改会影响 SDK 的执行。</span><span class="sxs-lookup"><span data-stu-id="45b78-131">Any change to your CLI configuration will impact the SDK execution.</span></span>
+> <span data-ttu-id="c360d-129">应将此方法用作开发人员快速入门体验。</span><span class="sxs-lookup"><span data-stu-id="c360d-129">This should be used as quick start developer experience.</span></span> <span data-ttu-id="c360d-130">对于生产用途，请使用 [ADAL](#authenticate-with-token-credentials) 或自己的凭据系统。</span><span class="sxs-lookup"><span data-stu-id="c360d-130">For production purposes, use [ADAL](#authenticate-with-token-credentials) or your own credentials system.</span></span>
+> <span data-ttu-id="c360d-131">对 CLI 配置进行任何更改会影响 SDK 的执行。</span><span class="sxs-lookup"><span data-stu-id="c360d-131">Any change to your CLI configuration will impact the SDK execution.</span></span>
 
-<span data-ttu-id="45b78-132">若要定义活动的凭据，请使用 [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)。</span><span class="sxs-lookup"><span data-stu-id="45b78-132">To define active credentials, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).</span></span>
-<span data-ttu-id="45b78-133">默认的订阅 ID 是你拥有的唯一 ID，或使用 [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli) 定义的 ID</span><span class="sxs-lookup"><span data-stu-id="45b78-133">Default subscription ID is either the only one you have, or you can define it using [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli)</span></span>
+<span data-ttu-id="c360d-132">若要定义活动的凭据，请使用 [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)。</span><span class="sxs-lookup"><span data-stu-id="c360d-132">To define active credentials, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).</span></span>
+<span data-ttu-id="c360d-133">默认的订阅 ID 是你拥有的唯一 ID，或使用 [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli) 定义的 ID</span><span class="sxs-lookup"><span data-stu-id="c360d-133">Default subscription ID is either the only one you have, or you can define it using [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli)</span></span>
 
 ```python
 from azure.common.client_factory import get_client_from_cli_profile
@@ -206,11 +205,11 @@ from azure.mgmt.compute import ComputeManagementClient
 client = get_client_from_cli_profile(ComputeManagementClient)
 ```
 
-## <a name="mgmt-auth-legacy"></a><span data-ttu-id="45b78-134">使用令牌凭据进行身份验证（传统方法）</span><span class="sxs-lookup"><span data-stu-id="45b78-134">Authenticate with token credentials (legacy)</span></span>
+## <a name="mgmt-auth-legacy"></a><span data-ttu-id="c360d-134">使用令牌凭据进行身份验证（传统方法）</span><span class="sxs-lookup"><span data-stu-id="c360d-134">Authenticate with token credentials (legacy)</span></span>
 
-<span data-ttu-id="45b78-135">以前的 SDK 版本尚未推出 ADAL，而是提供一个 `UserPassCredentials` 类。</span><span class="sxs-lookup"><span data-stu-id="45b78-135">In previous version of the SDK, ADAL was not yet available and we provided a `UserPassCredentials` class.</span></span> <span data-ttu-id="45b78-136">此类被视为已弃用，不应继续使用。</span><span class="sxs-lookup"><span data-stu-id="45b78-136">This is considered deprecated and should not be used anymore.</span></span>
+<span data-ttu-id="c360d-135">以前的 SDK 版本尚未推出 ADAL，而是提供一个 `UserPassCredentials` 类。</span><span class="sxs-lookup"><span data-stu-id="c360d-135">In previous version of the SDK, ADAL was not yet available and we provided a `UserPassCredentials` class.</span></span> <span data-ttu-id="c360d-136">此类被视为已弃用，不应继续使用。</span><span class="sxs-lookup"><span data-stu-id="c360d-136">This is considered deprecated and should not be used anymore.</span></span>
 
-<span data-ttu-id="45b78-137">此示例演示用户/密码方案。</span><span class="sxs-lookup"><span data-stu-id="45b78-137">This sample shows user/password scenario.</span></span> <span data-ttu-id="45b78-138">此方案不支持 2FA。</span><span class="sxs-lookup"><span data-stu-id="45b78-138">This does not support 2FA.</span></span>
+<span data-ttu-id="c360d-137">此示例演示用户/密码方案。</span><span class="sxs-lookup"><span data-stu-id="c360d-137">This sample shows user/password scenario.</span></span> <span data-ttu-id="c360d-138">此方案不支持 2FA。</span><span class="sxs-lookup"><span data-stu-id="c360d-138">This does not support 2FA.</span></span>
 
 ```python
     from azure.common.credentials import UserPassCredentials

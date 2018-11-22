@@ -11,31 +11,31 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 3d2691ae1ba84c41f25de2b099aacefaa92152ed
-ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
+ms.openlocfilehash: 98e32799a4240f9946caf1ab7b05e35605d89dc9
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
-ms.locfileid: "29551610"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277057"
 ---
-# <a name="azure-scheduler-libraries-for-python"></a><span data-ttu-id="29a86-104">用于 Python 的 Azure 计划程序库</span><span class="sxs-lookup"><span data-stu-id="29a86-104">Azure Scheduler libraries for python</span></span>
+# <a name="azure-scheduler-libraries-for-python"></a><span data-ttu-id="3d2cf-104">用于 Python 的 Azure 计划程序库</span><span class="sxs-lookup"><span data-stu-id="3d2cf-104">Azure Scheduler libraries for python</span></span>
 
-## <a name="install-the-libraries"></a><span data-ttu-id="29a86-105">安装库</span><span class="sxs-lookup"><span data-stu-id="29a86-105">Install the libraries</span></span>
+## <a name="install-the-libraries"></a><span data-ttu-id="3d2cf-105">安装库</span><span class="sxs-lookup"><span data-stu-id="3d2cf-105">Install the libraries</span></span>
 
-## <a name="management"></a><span data-ttu-id="29a86-106">管理</span><span class="sxs-lookup"><span data-stu-id="29a86-106">Management</span></span>
+## <a name="management"></a><span data-ttu-id="3d2cf-106">管理</span><span class="sxs-lookup"><span data-stu-id="3d2cf-106">Management</span></span>
 
 ```bash
 pip install azure-mgmt-scheduler
 ```
-## <a name="example"></a><span data-ttu-id="29a86-107">示例</span><span class="sxs-lookup"><span data-stu-id="29a86-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="3d2cf-107">示例</span><span class="sxs-lookup"><span data-stu-id="3d2cf-107">Example</span></span>
 
-### <a name="create-the-management-client"></a><span data-ttu-id="29a86-108">创建管理客户端</span><span class="sxs-lookup"><span data-stu-id="29a86-108">Create the management client</span></span>
+### <a name="create-the-management-client"></a><span data-ttu-id="3d2cf-108">创建管理客户端</span><span class="sxs-lookup"><span data-stu-id="3d2cf-108">Create the management client</span></span>
 
-<span data-ttu-id="29a86-109">以下代码创建管理客户端的实例。</span><span class="sxs-lookup"><span data-stu-id="29a86-109">The following code creates an instance of the management client.</span></span>
+<span data-ttu-id="3d2cf-109">以下代码创建管理客户端的实例。</span><span class="sxs-lookup"><span data-stu-id="3d2cf-109">The following code creates an instance of the management client.</span></span>
 
-<span data-ttu-id="29a86-110">你需要提供可以从[订阅列表](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping)检索的 ``subscription_id``。</span><span class="sxs-lookup"><span data-stu-id="29a86-110">You will need to provide your ``subscription_id`` which can be retrieved from [your subscription list](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping).</span></span>
+<span data-ttu-id="3d2cf-110">你需要提供可以从[订阅列表](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping)检索的 ``subscription_id``。</span><span class="sxs-lookup"><span data-stu-id="3d2cf-110">You will need to provide your ``subscription_id`` which can be retrieved from [your subscription list](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping).</span></span>
 
-<span data-ttu-id="29a86-111">有关使用 Python SDK 处理 Azure Active Directory 身份验证以及创建 ``Credentials`` 实例的详细信息，请参阅[资源管理身份验证](/python/azure/python-sdk-azure-authenticate)。</span><span class="sxs-lookup"><span data-stu-id="29a86-111">See [Resource Management Authentication](/python/azure/python-sdk-azure-authenticate) for details on handling Azure Active Directory authentication with the Python SDK, and creating a ``Credentials`` instance.</span></span>
+<span data-ttu-id="3d2cf-111">有关使用 Python SDK 处理 Azure Active Directory 身份验证以及创建 ``Credentials`` 实例的详细信息，请参阅[资源管理身份验证](/python/azure/python-sdk-azure-authenticate)。</span><span class="sxs-lookup"><span data-stu-id="3d2cf-111">See [Resource Management Authentication](/python/azure/python-sdk-azure-authenticate) for details on handling Azure Active Directory authentication with the Python SDK, and creating a ``Credentials`` instance.</span></span>
 
 ```python
 from azure.mgmt.scheduler import SchedulerManagementClient
@@ -56,10 +56,10 @@ scheduler_client = SchedulerManagementClient(
 )
 ```
 
-### <a name="create-a-job-collection"></a><span data-ttu-id="29a86-112">创建作业集合</span><span class="sxs-lookup"><span data-stu-id="29a86-112">Create a job collection</span></span>
+### <a name="create-a-job-collection"></a><span data-ttu-id="3d2cf-112">创建作业集合</span><span class="sxs-lookup"><span data-stu-id="3d2cf-112">Create a job collection</span></span>
 
-<span data-ttu-id="29a86-113">下面的代码在现有的资源组下创建作业集合。</span><span class="sxs-lookup"><span data-stu-id="29a86-113">The following code creates a job collection under an existing resource group.</span></span>
-<span data-ttu-id="29a86-114">若要创建或管理资源组，请参阅[资源管理](/python/api/overview/azure/azure.mgmt.resource)。</span><span class="sxs-lookup"><span data-stu-id="29a86-114">To create or manage resource groups, see [Resource Management](/python/api/overview/azure/azure.mgmt.resource).</span></span>
+<span data-ttu-id="3d2cf-113">下面的代码在现有的资源组下创建作业集合。</span><span class="sxs-lookup"><span data-stu-id="3d2cf-113">The following code creates a job collection under an existing resource group.</span></span>
+<span data-ttu-id="3d2cf-114">若要创建或管理资源组，请参阅[资源管理](/python/api/overview/azure/azure.mgmt.resource)。</span><span class="sxs-lookup"><span data-stu-id="3d2cf-114">To create or manage resource groups, see [Resource Management](/python/api/overview/azure/azure.mgmt.resource).</span></span>
 
 ```python
 from azure.mgmt.scheduler.models import JobCollectionDefinition, JobCollectionProperties, Sku
@@ -82,4 +82,4 @@ scheduler_client.job_collections.create_or_update(
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="29a86-115">了解管理 API</span><span class="sxs-lookup"><span data-stu-id="29a86-115">Explore the Management APIs</span></span>](/python/api/overview/azure/scheduler/management)
+> [<span data-ttu-id="3d2cf-115">了解管理 API</span><span class="sxs-lookup"><span data-stu-id="3d2cf-115">Explore the Management APIs</span></span>](/python/api/overview/azure/scheduler/management)
