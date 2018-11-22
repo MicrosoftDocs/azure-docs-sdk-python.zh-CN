@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 56eb23599d4d40fa91c55aefbe372bcb3a630031
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 554d45b828b93aba7c36c14855288685f969c7dc
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29479200"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277047"
 ---
 # <a name="azure-recovery-services-backup-libraries-for-python"></a>用于 Python 的 Azure 恢复服务备份库
 

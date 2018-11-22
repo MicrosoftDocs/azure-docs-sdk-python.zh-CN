@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: container-instances
-ms.openlocfilehash: 09f39375e0e92b6d09a965c3972d772a1437d0d4
-ms.sourcegitcommit: 8c70bfd95309c3a77a4c0f73373c1785d59cdd10
+ms.openlocfilehash: 95571e0da6ef82ef045d8c9ba0a5beb0abe9b63a
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34761319"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52273013"
 ---
 # <a name="azure-container-instances-libraries-for-python"></a>用于 Python 的 Azure 容器实例库
 
@@ -56,8 +56,7 @@ pip install azure-mgmt-containerinstance
 
 创建凭据文件并填充 `AZURE_AUTH_LOCATION` 环境变量以后，请使用 [client_factory][client_factory] 模块的 `get_client_from_auth_file` 方法初始化 [ResourceManagementClient][ResourceManagementClient] 和 [ContainerInstanceManagementClient][ContainerInstanceManagementClient] 对象。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
-[!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
 
 若要更详细地了解用于 Azure 的 Python 管理库中提供的身份验证方法，请参阅[使用用于 Python 的 Azure 管理库进行身份验证](/python/azure/python-sdk-azure-authenticate)。
 
@@ -65,15 +64,13 @@ pip install azure-mgmt-containerinstance
 
 此示例创建包含单个容器的容器组
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
-[!code-python[create_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L94-L140 "Create single-container group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[create_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L94-L140 "Create single-container group")]
 
 ## <a name="create-container-group---multiple-containers"></a>创建容器组 - 多个容器
 
 此示例创建的容器组包含两个容器：应用程序容器和挎斗容器。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
-[!code-python[create_container_group_multi](~/aci-docs-sample-python/src/aci_docs_sample.py#L143-L196 "Create multi-container group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[create_container_group_multi](~/aci-docs-sample-python/src/aci_docs_sample.py#L143-L196 "Create multi-container group")]
 
 ## <a name="create-task-based-container-group"></a>创建基于任务的容器组
 
@@ -92,8 +89,7 @@ pip install azure-mgmt-containerinstance
 * [重启策略](/azure/container-instances/container-instances-restart-policy) - 为容器配置的重启策略为“从不”，这适用于基于任务的容器，此类容器是在执行批处理作业的过程中执行的。
 * 使用 [AzureOperationPoller][AzureOperationPoller] 进行操作轮询 - 在调用 create 方法以后，会进行操作轮询以确定操作完成时间，并可获取容器组的日志。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
-[!code-python[create_container_group_task](~/aci-docs-sample-python/src/aci_docs_sample.py#L199-L275 "Run a task-based container")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[create_container_group_task](~/aci-docs-sample-python/src/aci_docs_sample.py#L199-L275 "Run a task-based container")]
 
 ## <a name="list-container-groups"></a>列出容器组
 
@@ -101,8 +97,7 @@ pip install azure-mgmt-containerinstance
 
 列出容器组时，每个返回的组的 [instance_view][instance_view] 为 `None`。 若要获取某个容器组中容器的详细信息，必须接着对该容器组执行 [get][containergroupoperations_get] 操作，以便返回 `instance_view` 属性已填充的组。 如需通过示例来了解如何在容器组的 `instance_view` 中循环访问该组的容器，请参阅下一部分：[获取现有的容器组](#get-an-existing-container-group)。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
-[!code-python[list_container_groups](~/aci-docs-sample-python/src/aci_docs_sample.py#L278-L292 "List container groups")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[list_container_groups](~/aci-docs-sample-python/src/aci_docs_sample.py#L278-L292 "List container groups")]
 
 ## <a name="get-an-existing-container-group"></a>获取现有的容器组
 
@@ -110,15 +105,13 @@ pip install azure-mgmt-containerinstance
 
 [get 操作][containergroupoperations_get]返回其 [instance_view][instance_view] 已填充的容器组，这样就可以循环访问组中的每个容器。 只有 `get` 操作会填充容器组的 `instance_vew` 属性--列出订阅或资源组中的容器组不会填充实例视图，因为列出操作的开销可能很昂贵（例如，如果列出数百个容器组，而每个容器组又可能包含多个容器，则开销会很大）。 如前面的[列出容器组](#list-container-groups)部分所述，在 `list` 操作之后，接着必须对特定的容器组执行 `get` 操作，以便获取其容器实例详细信息。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
-[!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L295-L324 "Get container group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L295-L324 "Get container group")]
 
 ## <a name="delete-a-container-group"></a>删除容器组
 
 此示例删除资源组中的多个容器组，以及该资源组本身。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
-[!code-python[delete_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L83-L91 "Delete container groups and resource group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[delete_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L83-L91 "Delete container groups and resource group")]
 
 ## <a name="next-steps"></a>后续步骤
 
