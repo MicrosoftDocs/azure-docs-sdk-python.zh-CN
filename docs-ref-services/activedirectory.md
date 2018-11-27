@@ -10,13 +10,12 @@ ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
-ms.service: active-directory
-ms.openlocfilehash: 78df70001dd0d55ac2c9c9da04fac6a51c5919e6
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 4cf4149dfbd8209020e3affc0d15ab870f8d9697
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29478920"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52276741"
 ---
 # <a name="azure-active-directory-libraries-for-python"></a>用于 Python 的 Azure Active Directory 库
 
