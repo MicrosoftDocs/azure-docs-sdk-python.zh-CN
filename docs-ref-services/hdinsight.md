@@ -7,18 +7,18 @@ ms.author: tyfox
 ms.date: 09/18/2018
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: 42e1e36b5854fda93188564be3ed3064b9ba4435
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 9447d50fd734bd9221accbf470a456210bb57a7f
+ms.sourcegitcommit: e2e4b1ecfac9804a72973477634128061c1ec990
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277465"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53455104"
 ---
 # <a name="hdinsight-python-management-sdk-preview"></a>HDInsight Python 管理 SDK 预览版
 
 ## <a name="overview"></a>概述
 
-HDInsight Python SDK 提供用于管理 HDInsight 群集的类和方法。 该 SDK 包含用于创建、删除、更新、列出、缩放、执行脚本操作，以及监视、获取 HDInsight 群集属性等的操作。
+HDInsight Python SDK 提供用于管理 HDInsight 群集的类和方法。 该 SDK 包含用于创建、删除、更新、列出、调整大小、执行脚本操作，以及监视、获取 HDInsight 群集属性等操作。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -37,7 +37,7 @@ HDInsight Python SDK 提供用于管理 HDInsight 群集的类和方法。 该 S
 首先需要使用 Azure 订阅对该 SDK 进行身份验证。  请遵循以下示例创建服务主体，然后使用该服务主体进行身份验证。 完成此操作后，将会获得 `HDInsightManagementClient` 的实例，其中包含可用于执行管理操作的多个方法（以下部分将概述这些方法）。
 
 > [!NOTE]
-> 除了以下示例中所示的方法以外，还有其他一些身份验证方法可能更符合你的需要。 [使用用于 Python 的 Azure 管理库进行身份验证](https://docs.microsoft.com/en-us/python/azure/python-sdk-azure-authenticate?view=azure-python)中概述了所有方法
+> 除了以下示例中所示的方法以外，还有其他一些身份验证方法可能更符合你的需要。 此处概述了所有方法：[使用用于 Python 的 Azure 管理库进行身份验证](https://docs.microsoft.com/en-us/python/azure/python-sdk-azure-authenticate?view=azure-python)
 
 ### <a name="authentication-example-using-a-service-principal"></a>使用服务主体的身份验证示例
 
@@ -310,9 +310,9 @@ client.clusters.update("<Resource Group Name>", "<Cluster Name>", tags={<Diction
 client.clusters.update("<Resource Group Name>", "<Cluster Name>", tags={"tag1Name" : "tag1Value", "tag2Name" : "tag2Value"})
 ```
 
-### <a name="scale-cluster"></a>缩放群集
+### <a name="resize-cluster"></a>调整群集大小
 
-可以通过指定新大小来缩放给定群集的工作节点数，如下所示：
+可以通过指定新大小来调整给定群集的工作节点数，如下所示：
 
 ```python
 client.clusters.resize("<Resource Group Name>", "<Cluster Name>", target_instance_count=<Num of Worker Nodes>)
@@ -325,7 +325,7 @@ client.clusters.resize("<Resource Group Name>", "<Cluster Name>", target_instanc
 ### <a name="enable-oms-monitoring"></a>启用 OMS 监视
 
 > [!NOTE]
-> 若要启用 OMS 监视，必须已有一个 Log Analytics 工作区。 如果尚未创建此工作区，可以参阅[在 Azure 门户中创建 Log Analytics 工作区](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)了解相关操作。
+> 若要启用 OMS 监视，必须已有一个 Log Analytics 工作区。 如果尚未创建工作区，可在此了解创建方法：[在 Azure 门户中创建 Log Analytics 工作区](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)。
 
 在群集上启用 OMS 监视：
 
@@ -353,7 +353,7 @@ client.extension.disable_monitoring("<Resource Group Name>", "<Cluster Name>")
 
 HDInsight 提供一个称为“脚本操作”的配置方法，该方法可调用用于自定义群集的自定义脚本。
 > [!NOTE]
-> 有关如何使用脚本操作的详细信息，请参阅[使用脚本操作自定义基于 Linux 的 HDInsight 群集](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)
+> 有关如何使用脚本操作的详细信息见此处：[使用脚本操作自定义基于 Linux 的 HDInsight 群集](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)
 
 ### <a name="execute-script-actions"></a>执行脚本操作
 若要在给定群集上执行脚本操作，请使用以下命令：
