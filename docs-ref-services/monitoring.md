@@ -11,31 +11,31 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 2d4172fa206b89437cca88fb2c5d0a7965be4e9b
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 36746da246db2467b336a2eb14bfe2f6300b6ea4
+ms.sourcegitcommit: 993aacad1d19d87533023f154c015d840723d716
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277169"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57528055"
 ---
-# <a name="azure-monitoring-libraries-for-python"></a><span data-ttu-id="f4139-104">用于 Python 的 Azure 监视库</span><span class="sxs-lookup"><span data-stu-id="f4139-104">Azure Monitoring libraries for python</span></span>
+# <a name="azure-monitoring-libraries-for-python"></a><span data-ttu-id="ed220-104">用于 Python 的 Azure 监视库</span><span class="sxs-lookup"><span data-stu-id="ed220-104">Azure Monitoring libraries for python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="f4139-105">概述</span><span class="sxs-lookup"><span data-stu-id="f4139-105">Overview</span></span> 
-<span data-ttu-id="f4139-106">监视可以为用户提供数据，确保应用程序始终处于健康运行状态。</span><span class="sxs-lookup"><span data-stu-id="f4139-106">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="f4139-107">监视还有助于避免潜在问题，或者解决过去的问题。</span><span class="sxs-lookup"><span data-stu-id="f4139-107">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="f4139-108">此外，还可以利用监视数据深入了解应用程序的情况。</span><span class="sxs-lookup"><span data-stu-id="f4139-108">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="f4139-109">了解这些情况有助于改进应用程序的性能或可维护性，或者实现本来需要手动干预的操作的自动化。</span><span class="sxs-lookup"><span data-stu-id="f4139-109">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
+## <a name="overview"></a><span data-ttu-id="ed220-105">概述</span><span class="sxs-lookup"><span data-stu-id="ed220-105">Overview</span></span> 
+<span data-ttu-id="ed220-106">监视可以为用户提供数据，确保应用程序始终处于健康运行状态。</span><span class="sxs-lookup"><span data-stu-id="ed220-106">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="ed220-107">监视还有助于避免潜在问题，或者解决过去的问题。</span><span class="sxs-lookup"><span data-stu-id="ed220-107">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="ed220-108">此外，还可以利用监视数据深入了解应用程序的情况。</span><span class="sxs-lookup"><span data-stu-id="ed220-108">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="ed220-109">了解这些情况有助于改进应用程序的性能或可维护性，或者实现本来需要手动干预的操作的自动化。</span><span class="sxs-lookup"><span data-stu-id="ed220-109">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
 
-<span data-ttu-id="f4139-110">在[此处](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)详细了解 Azure Monitor。</span><span class="sxs-lookup"><span data-stu-id="f4139-110">Learn more about Azure Monitor [here](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor).</span></span> 
+<span data-ttu-id="ed220-110">在[此处](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)详细了解 Azure Monitor。</span><span class="sxs-lookup"><span data-stu-id="ed220-110">Learn more about Azure Monitor [here](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor).</span></span> 
 
-## <a name="installation"></a><span data-ttu-id="f4139-111">安装</span><span class="sxs-lookup"><span data-stu-id="f4139-111">Installation</span></span>
+## <a name="installation"></a><span data-ttu-id="ed220-111">安装</span><span class="sxs-lookup"><span data-stu-id="ed220-111">Installation</span></span>
 ```bash
 pip install azure-mgmt-monitor
 ```
 
-## <a name="example---metrics"></a><span data-ttu-id="f4139-112">示例 - 指标</span><span class="sxs-lookup"><span data-stu-id="f4139-112">Example - Metrics</span></span>
-<span data-ttu-id="f4139-113">此示例获取 Azure 上的资源（VM 等）的指标。</span><span class="sxs-lookup"><span data-stu-id="f4139-113">This sample obtains the metrics of a resource on Azure (VMs, etc.).</span></span> <span data-ttu-id="f4139-114">此示例至少需要 Python 程序包的 0.4.0 版。</span><span class="sxs-lookup"><span data-stu-id="f4139-114">This sample requires version 0.4.0 of the Python package at least.</span></span>
+## <a name="example---metrics"></a><span data-ttu-id="ed220-112">示例 - 指标</span><span class="sxs-lookup"><span data-stu-id="ed220-112">Example - Metrics</span></span>
+<span data-ttu-id="ed220-113">此示例获取 Azure 上的资源（VM 等）的指标。</span><span class="sxs-lookup"><span data-stu-id="ed220-113">This sample obtains the metrics of a resource on Azure (VMs, etc.).</span></span> <span data-ttu-id="ed220-114">此示例至少需要 Python 程序包的 0.4.0 版。</span><span class="sxs-lookup"><span data-stu-id="ed220-114">This sample requires version 0.4.0 of the Python package at least.</span></span>
 
-<span data-ttu-id="f4139-115">[此处](https://msdn.microsoft.com/library/azure/mt743622.aspx)提供了筛选器可用关键字的完整列表。</span><span class="sxs-lookup"><span data-stu-id="f4139-115">A complete list of available keywords for filters is available [here](https://msdn.microsoft.com/library/azure/mt743622.aspx).</span></span>
+<span data-ttu-id="ed220-115">[此处](https://msdn.microsoft.com/library/azure/mt743622.aspx)提供了筛选器可用关键字的完整列表。</span><span class="sxs-lookup"><span data-stu-id="ed220-115">A complete list of available keywords for filters is available [here](https://msdn.microsoft.com/library/azure/mt743622.aspx).</span></span>
 
-<span data-ttu-id="f4139-116">[此处](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics)提供了每个资源类型支持的指标。</span><span class="sxs-lookup"><span data-stu-id="f4139-116">Supported metrics per resource type is available [here](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics).</span></span>
+<span data-ttu-id="ed220-116">[此处](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics)提供了每个资源类型支持的指标。</span><span class="sxs-lookup"><span data-stu-id="ed220-116">Supported metrics per resource type is available [here](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics).</span></span>
 
 ```python
 import datetime
@@ -83,7 +83,7 @@ metrics_data = client.metrics.list(
     resource_id,
     timespan="{}/{}".format(yesterday, today),
     interval='PT1H',
-    metric='Percentage CPU',
+    metricnames='Percentage CPU',
     aggregation='Total'
 )
 
@@ -107,10 +107,10 @@ for item in metrics_data.value:
 # 2016-11-16 07:00:00+00:00: 45.4
 ```
 
-## <a name="example---alerts"></a><span data-ttu-id="f4139-117">示例 - 警报</span><span class="sxs-lookup"><span data-stu-id="f4139-117">Example - Alerts</span></span>
-<span data-ttu-id="f4139-118">此示例演示如何在创建资源时自动对资源设置警报，确保正确监视所有资源。</span><span class="sxs-lookup"><span data-stu-id="f4139-118">This example shows how to automatically set up alerts on your resources when they are created to ensure that all resources are monitored correctly.</span></span>
+## <a name="example---alerts"></a><span data-ttu-id="ed220-117">示例 - 警报</span><span class="sxs-lookup"><span data-stu-id="ed220-117">Example - Alerts</span></span>
+<span data-ttu-id="ed220-118">此示例演示如何在创建资源时自动对资源设置警报，确保正确监视所有资源。</span><span class="sxs-lookup"><span data-stu-id="ed220-118">This example shows how to automatically set up alerts on your resources when they are created to ensure that all resources are monitored correctly.</span></span>
 
-<span data-ttu-id="f4139-119">在 VM 上创建一个数据源用于针对 CPU 使用率发出警报：</span><span class="sxs-lookup"><span data-stu-id="f4139-119">Create a data source on a VM to alert on CPU usage:</span></span>
+<span data-ttu-id="ed220-119">在 VM 上创建一个数据源用于针对 CPU 使用率发出警报：</span><span class="sxs-lookup"><span data-stu-id="ed220-119">Create a data source on a VM to alert on CPU usage:</span></span>
 ```python
 from azure.mgmt.monitor import MonitorMgmtClient
 from azure.mgmt.monitor.models import RuleMetricDataSource
@@ -133,7 +133,7 @@ data_source = RuleMetricDataSource(
     metric_name = 'Percentage CPU'
 )
 ```
-<span data-ttu-id="f4139-120">创建当 VM 的平均 CPU 使用率在过去 5 分钟高于 90% 时触发的阈值条件（使用前面的数据源）：</span><span class="sxs-lookup"><span data-stu-id="f4139-120">Create a threshold condition that triggers when the average CPU usage of a VM for the last 5 minutes is above 90% (using the preceding data source):</span></span>
+<span data-ttu-id="ed220-120">创建当 VM 的平均 CPU 使用率在过去 5 分钟高于 90% 时触发的阈值条件（使用前面的数据源）：</span><span class="sxs-lookup"><span data-stu-id="ed220-120">Create a threshold condition that triggers when the average CPU usage of a VM for the last 5 minutes is above 90% (using the preceding data source):</span></span>
 ```python
 from azure.mgmt.monitor.models import ThresholdRuleCondition
 
@@ -147,7 +147,7 @@ rule_condition = ThresholdRuleCondition(
 )
 ```
 
-<span data-ttu-id="f4139-121">创建电子邮件操作：</span><span class="sxs-lookup"><span data-stu-id="f4139-121">Create an email action:</span></span>
+<span data-ttu-id="ed220-121">创建电子邮件操作：</span><span class="sxs-lookup"><span data-stu-id="ed220-121">Create an email action:</span></span>
 ```python
 from azure.mgmt.monitor.models import RuleEmailAction
 
@@ -160,7 +160,7 @@ rule_action = RuleEmailAction(
 )
 ```
 
-<span data-ttu-id="f4139-122">创建警报：</span><span class="sxs-lookup"><span data-stu-id="f4139-122">Create the alert:</span></span>
+<span data-ttu-id="ed220-122">创建警报：</span><span class="sxs-lookup"><span data-stu-id="ed220-122">Create the alert:</span></span>
 ```python
 rule_name = 'MyPyTestAlertRule'
 my_alert = client.alert_rules.create_or_update(
@@ -179,4 +179,4 @@ my_alert = client.alert_rules.create_or_update(
 )
 ```
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="f4139-123">了解管理 API</span><span class="sxs-lookup"><span data-stu-id="f4139-123">Explore the Management APIs</span></span>](/python/api/overview/azure/monitoring/management)
+> [<span data-ttu-id="ed220-123">了解管理 API</span><span class="sxs-lookup"><span data-stu-id="ed220-123">Explore the Management APIs</span></span>](/python/api/overview/azure/monitoring/management)
