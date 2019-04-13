@@ -1,24 +1,24 @@
 ---
-title: Azure HDInsight Python SDK 预览版
-description: Azure HDInsight Python SDK 参考。 HDInsight Python SDK 提供用于管理 HDInsight 群集的类和方法。
+title: Azure HDInsight SDK for Python
+description: Azure HDInsight SDK for Python 参考。 HDInsight SDK for Python 提供用于管理 HDInsight 群集的类和方法。
 ms.service: hdinsight
 author: tylerfox
 ms.author: tyfox
-ms.date: 09/18/2018
+ms.date: 04/10/2019
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: 8d081739a3984e1cd3f7bbf31fcb44d63cfb6947
-ms.sourcegitcommit: fba77bdf8eb9f49621be94544d9fef88aff98c14
+ms.openlocfilehash: f16e5da474e1c506c800b860b451754a6bdc75bc
+ms.sourcegitcommit: 3c6087cbc1fee5a2c88c40fe96d351375c6c6377
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747707"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59504544"
 ---
-# <a name="hdinsight-python-management-sdk-preview"></a>HDInsight Python 管理 SDK 预览版
+# <a name="hdinsight-sdk-for-python"></a>HDInsight SDK for Python
 
 ## <a name="overview"></a>概述
 
-HDInsight Python SDK 提供用于管理 HDInsight 群集的类和方法。 该 SDK 包含用于创建、删除、更新、列出、调整大小、执行脚本操作，以及监视、获取 HDInsight 群集属性等操作。
+HDInsight SDK for Python 提供用于管理 HDInsight 群集的类和方法。 该 SDK 包含用于创建、删除、更新、列出、调整大小、执行脚本操作，以及监视、获取 HDInsight 群集属性等操作。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -28,11 +28,11 @@ HDInsight Python SDK 提供用于管理 HDInsight 群集的类和方法。 该 S
 
 ## <a name="sdk-installation"></a>SDK 安装
 
-[Python 包索引](https://pypi.org/project/azure-mgmt-hdinsight/)中提供 HDInsight Python SDK，可以通过运行以下命令来安装它： 
+HDInsight SDK for Python 在 [Python Package Index](https://pypi.org/project/azure-mgmt-hdinsight/) 中提供，可以通过运行以下命令来安装： 
 
 `pip install azure-mgmt-hdinsight`
 
-## <a name="authentication"></a>身份验证
+## <a name="authentication"></a>Authentication
 
 首先需要使用 Azure 订阅对该 SDK 进行身份验证。  请遵循以下示例创建服务主体，然后使用该服务主体进行身份验证。 完成此操作后，将会获得 `HDInsightManagementClient` 的实例，其中包含可用于执行管理操作的多个方法（以下部分将概述这些方法）。
 
@@ -235,6 +235,10 @@ client.clusters.create(
         properties=params
     ))
 ```
+
+#### <a name="samples"></a>示例
+
+还提供了用于创建几个常见类型的 HDInsight 群集的代码示例：[HDInsight Python 示例](https://github.com/Azure-Samples/hdinsight-python-sdk-samples)。
 
 ### <a name="get-cluster-details"></a>获取群集详细信息
 
