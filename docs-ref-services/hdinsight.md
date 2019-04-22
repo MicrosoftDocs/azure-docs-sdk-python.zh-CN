@@ -7,12 +7,12 @@ ms.author: tyfox
 ms.date: 04/10/2019
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: f16e5da474e1c506c800b860b451754a6bdc75bc
-ms.sourcegitcommit: 3c6087cbc1fee5a2c88c40fe96d351375c6c6377
+ms.openlocfilehash: ea9599be9fead5f964fbd4ce4e4bdc78a445918c
+ms.sourcegitcommit: 375a1f9180eb1323fe2af0a7e28fd4676973c68e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59504544"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59586815"
 ---
 # <a name="hdinsight-sdk-for-python"></a>HDInsight SDK for Python
 
@@ -131,7 +131,11 @@ client = HDInsightManagementClient(credentials, SUBSCRIPTION_ID)
 
 ### <a name="create-a-cluster"></a>创建群集
 
-可以通过调用 `client.clusters.create()` 来创建新群集。 
+可以通过调用 `client.clusters.create()` 来创建新群集。
+
+#### <a name="samples"></a>示例
+
+提供了用于创建几个常见类型的 HDInsight 群集的代码示例：[HDInsight Python 示例](https://github.com/Azure-Samples/hdinsight-python-sdk-samples)。
 
 #### <a name="example"></a>示例
 
@@ -235,10 +239,6 @@ client.clusters.create(
         properties=params
     ))
 ```
-
-#### <a name="samples"></a>示例
-
-还提供了用于创建几个常见类型的 HDInsight 群集的代码示例：[HDInsight Python 示例](https://github.com/Azure-Samples/hdinsight-python-sdk-samples)。
 
 ### <a name="get-cluster-details"></a>获取群集详细信息
 
