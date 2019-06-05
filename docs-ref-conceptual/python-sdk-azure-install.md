@@ -11,16 +11,17 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 792feac12f8328e2467017530065350e347c59b7
-ms.sourcegitcommit: 757bf84535fd9d8299c4b51ec92a5ab1926cb671
+ms.openlocfilehash: 6014937fb41d6074e94578ccc47c30eb7b3f63d2
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
-ms.locfileid: "29565816"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376878"
 ---
 # <a name="installation"></a>安装
 
 ## <a name="which-python-and-which-version-to-use"></a>要使用哪种 Python 以及哪个版本
+
 有多个 Python 解释程序可用 - 示例包括：
 
 * CPython - 最常用的标准 Python 解释程序
@@ -31,6 +32,7 @@ ms.locfileid: "29565816"
 **CPython** v2.7 或 v3.4+ 和 PyPy 5.4.0 已经过测试，并且受 Python Azure SDK 支持。
 
 ## <a name="where-to-get-python"></a>从哪里获得 Python？
+
 有多种方法可获得 CPython：
 
 * 直接从 [Python](https://www.python.org/) 获得
@@ -70,6 +72,8 @@ pip install --pre azure
 
 如果想要从源安装 `azure`：
 
-    git clone git://github.com/Azure/azure-sdk-for-python.git
-    cd azure-sdk-for-python
-    python setup.py install
+```bash
+git clone git://github.com/Azure/azure-sdk-for-python.git
+cd azure-sdk-for-python
+python setup.py install
+```
