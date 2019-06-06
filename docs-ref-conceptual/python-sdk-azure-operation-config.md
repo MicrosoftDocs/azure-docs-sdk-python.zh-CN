@@ -10,22 +10,22 @@ ms.topic: article
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: d7be7cd76d019c6741d93c04458376a9352e363b
-ms.sourcegitcommit: 41e6e6b5469271f4ec497a322b460e2a2af2c73d
+ms.openlocfilehash: adeb6aa8a2c363c3119e97503df9536fb0633b4c
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204256"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376867"
 ---
 # <a name="operation-config"></a>操作配置 
 
-操作上的方法具有可以在 kwargs 中提供的额外参数。 这称为 operation_config。
+操作上的方法具有可以在 `kwargs` 中提供的额外参数。 这称为 operation_config。
 
 操作配置选项包括：
 
-|参数名称|类型|角色|
+|参数名称|Type|角色|
 |----------------------|------|---------------|
-| verify |`bool`|是否要验证 SSL 证书。 默认值为 True。|
+| 验证 |`bool`|是否要验证 SSL 证书。 默认值为 True。|
 |  cert |`str`| 用于客户端端验证的本地证书的路径。|
 |  timeout |`int`| 用于建立服务器连接的超时值（以秒为单位）。|
 |  allow_redirects |`bool` | 是否允许重定向。|

@@ -11,17 +11,17 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: storage
-ms.openlocfilehash: e45b12af9e026e0f6390556813385d86784feaa4
-ms.sourcegitcommit: 86f7f40295271ef94272642efb89b471aae99a2c
+ms.openlocfilehash: 5b4d4cc2dfb32dceb66bdb5be3fe0f0075840d8f
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35720058"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376750"
 ---
 # <a name="azure-storage-libraries-for-python"></a>用于 Python 的 Azure 存储库
 
 ## <a name="overview"></a>概述
-- 通过 [Azure Blob 存储](https://docs.microsoft.com/en-us/azure/storage/storage-python-how-to-use-blob-storage)读取和写入对象与文件
+- 通过 [Azure Blob 存储](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)读取和写入对象与文件
 - 使用 [Azure 队列存储](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-queue-storage)在已连接到云的应用程序之间发送和接收消息
 - 使用 [Azure 表存储](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-table-storage)读取和写入大型结构化数据 
 - 使用 [Azure 文件存储](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-file-storage)在应用之间共享存储
@@ -69,8 +69,8 @@ print(blob_service.make_blob_url('mycontainername', 'myblobname'))
 
 | | |
 |--|--|
-| [在 Python 中开始使用 Azure Blob 存储](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-python-how-to-use-blob-storage) | 在 Azure 存储中创建、读取、更新、限制访问和删除文件与对象。 |
-| [在 Python 中开始使用 Azure 队列存储](https://docs.microsoft.com/en-us/azure/storage/queues/storage-python-how-to-use-queue-storage) | 在 Azure 存储队列中插入、扫视、检索和删除消息。 | 
+| [在 Python 中开始使用 Azure Blob 存储](https://docs.microsoft.com/azure/storage/blobs/storage-python-how-to-use-blob-storage) | 在 Azure 存储中创建、读取、更新、限制访问和删除文件与对象。 |
+| [在 Python 中开始使用 Azure 队列存储](https://docs.microsoft.com/azure/storage/queues/storage-python-how-to-use-queue-storage) | 在 Azure 存储队列中插入、扫视、检索和删除消息。 | 
 | [管理 Azure 存储帐户](https://azure.microsoft.com/resources/samples/storage-python-manage) | 创建、更新和删除存储帐户。 检索和重新生成存储帐户访问密钥。
 
 详细了解可在应用中使用的[示例 Python 代码](https://azure.microsoft.com/resources/samples/?platform=python)。

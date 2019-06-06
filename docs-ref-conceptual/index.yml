@@ -8,7 +8,7 @@ metadata:
   author: sptramer
   ms.author: sttramer
   manager: carmonm
-  ms.date: 04/12/2019
+  ms.date: 04/17/2019
   ms.topic: landing-page
   ms.prod: azure
   ms.technology: azure
@@ -27,6 +27,18 @@ sections:
             image:
               src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
             title: 在 Azure 上生成并部署 Python Web 应用。
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/AzureFunctions.svg'
+            title: 使用 Visual Studio Code 在 Azure Functions 中创建和部署无服务器 Python 应用。
+            href: 'https://code.visualstudio.com/docs/python/tutorial-azure-functions'
+          - image:
+              src: 'https://docs.microsoft.com/python/azure/media/AzureNotebooks.png'
+            title: 在 Jupyter Notebook 中开始使用 Azure 机器学习。
+            href: 'https://docs.microsoft.com/en-us/azure/notebooks/use-machine-learning-services-jupyter-notebooks?toc=%2Fpython%2Fazure%2FTOC.json'
+          - image:
+              src: 'https://docs.microsoft.com/azure/devops/_img/index/devopsiconpipelines96.svg'
+            title: 在 Azure DevOps Pipelines 上生成并部署 Python 应用
+            href: 'https://docs.microsoft.com/azure/devops/pipelines/languages/python-webapp?toc=%2Fpython%2Fazure%2FTOC.json'
           - href: 'https://docs.microsoft.com/azure/cosmos-db/create-sql-api-python?toc=%2Fpython%2Fazure%2FTOC.json'
             image:
               src: 'https://docs.microsoft.com/azure/media/index/cosmosdb.svg'
@@ -110,7 +122,7 @@ sections:
               src: 'https://docs.microsoft.com/azure/media/index/cosmosdb.svg'
             title: Cosmos DB
             html: 在全球分布式可缩放多模型 NoSQL 数据库中存储数据。
-            href: 'https://docs.microsoft.com/azure/cosmos-db/sql-api-python-application?toc=%2Fpython%2Fazure%2FTOC.json'
+            href: 'https://docs.microsoft.com/en-us/azure/cosmos-db/create-sql-api-python?toc=%2Fpython%2Fazure%2FTOC.json'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/RedisCache.svg'
             title: Redis 缓存
@@ -141,18 +153,6 @@ sections:
             title: 服务总线
             html: 通过 FIFO 队列或主题订阅跨云发送消息。
             href: 'https://docs.microsoft.com/azure/service-bus-messaging/?toc=%2Fpython%2Fazure%2FTOC.json'
-  - title: Azure DevOps
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/azure/devops/_img/index/devopsiconpipelines96.svg'
-            title: Azure Pipelines
-            html: 通过 Azure Pipelines 生成、测试和部署 Python 代码。
-            href: 'https://docs.microsoft.com/azure/devops/pipelines/languages/python?toc=%2Fpython%2Fazure%2FTOC.json'
   - title: 安全性和集成
     items:
       - type: list
@@ -175,17 +175,12 @@ sections:
           - href: /python/api?view=azure-python
             image:
               src: 'http://docs.microsoft.com/media/common/i_api-reference.svg'
-            title: 适用于 Python 的 Azure SDK 参考
+            title: 用于 Python 的 Azure SDK API 参考
           - href: 'https://code.visualstudio.com/docs/python/python-tutorial'
             html: 使用 Visual Studio Code 开发 Python 应用并将其部署到 Azure。
             image:
               src: 'https://docs.microsoft.com/media/logos/logo_vs-code.svg'
             title: Visual Studio Code
-          - href: 'https://docs.microsoft.com/visualstudio/python/overview-of-python-tools-for-visual-studio?toc=%2Fpython%2Fazure%2FTOC.json'
-            html: Visual Studio Code 中适用于 Python 的 IntelliSense、开发、分析和调试工具。
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_visual-studio.svg'
-            title: Visual Studio IDE
           - href: 'https://docs.microsoft.com/cli/azure?toc=%2Fpython%2Fazure%2FTOC.json'
             html: 从命令行管理 Azure 资源。
             image:
