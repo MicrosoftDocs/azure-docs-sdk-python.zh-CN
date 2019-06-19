@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 736b2dd747842caa50418afc8219dafae655db39
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 5890c2091f8456dd9b8bcb68f8a34eed3cae6e04
+ms.sourcegitcommit: d7ad0e8b4ba4add5e6f63e6b9eac54ecccdc7090
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277454"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67148173"
 ---
 # <a name="azure-cognitive-services-modules-for-python"></a>用于 Python 的 Azure 认知服务模块
 
@@ -49,7 +49,7 @@ pip install azure-cognitiveservices-vision-computervision
 获取包含 [pip](https://pip.pypa.io/en/stable/quickstart/) 的 Python 模块：
 
 ```
-pip install azure-cognitiveservices-vision-computervision
+pip install azure-cognitiveservices-vision-contentmoderator
 ```
 
 [详细了解](/azure/cognitive-services/content-moderator/overview)内容审查器服务。
