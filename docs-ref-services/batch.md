@@ -3,7 +3,7 @@ title: 用于 Python 的 Azure Batch 库
 description: Python Batch 库的参考文档
 keywords: Azure, Python, SDK, API, Batch, 处理, 计划, 长时间运行
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 07/31/2017
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: batch
-ms.openlocfilehash: fb9528c449d197440590bfc3b1991065cfe13357
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: bbc691a8db6597c77575900b4e2a06f34ebb179c
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376839"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534356"
 ---
 # <a name="azure-batch-libraries-for-python"></a>用于 Python 的 Azure Batch 库
 

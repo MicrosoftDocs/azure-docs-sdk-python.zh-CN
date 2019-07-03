@@ -3,18 +3,18 @@ title: 用于 Python 的 Azure 事件网格库
 description: ''
 keywords: Azure, Python, SDK, API, 事件网格
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 08/21/2017
 ms.topic: article
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: bfaa1908295eb77531e399f1337acdeee512005f
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: e5df1078116f13f959923eac3e0c7b5789545278
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52276831"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534290"
 ---
 # <a name="event-grid-libraries-for-python"></a>用于 Python 的事件网格库
 
@@ -88,7 +88,7 @@ pip install azure-mgmt-eventgrid
 ### <a name="example"></a>示例
 
 以下示例创建自定义主题并让终结点订阅主题。 该代码然后通过 HTTPS 将事件发送到主题。
-RequestBin 是第三方开源工具，用于创建终结点和查看发送到其中的请求。 转到 [RequestBin](https://requestb.in/)，单击“创建 RequestBin”。 复制 bin URL，因为在订阅主题时需要它。
+RequestBin 是第三方开源工具，用于创建终结点和查看发送到其中的请求。 转到 [RequestBin](https://requestbin.com)，单击“创建 RequestBin”。  复制 bin URL，因为在订阅主题时需要它。
 
 ```python
 from azure.mgmt.resource import ResourceManagementClient

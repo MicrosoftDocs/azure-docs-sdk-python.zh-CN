@@ -3,7 +3,7 @@ title: 发行说明
 description: 了解用于 Python 的 Azure 管理库的新增功能，并留意其中的重大更改
 keywords: Azure, Python, SDK, API
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/05/2017
 ms.topic: install
@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: python
 ms.service: multiple
 ms.assetid: ''
-ms.openlocfilehash: b6ab1ec334b116a2ef8e8cb416501ad4e7fc63b9
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: faef505593e82ffc6676efd6dc8ed83ee3784fae
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52272923"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534445"
 ---
 # <a name="release-notes"></a>发行说明
 

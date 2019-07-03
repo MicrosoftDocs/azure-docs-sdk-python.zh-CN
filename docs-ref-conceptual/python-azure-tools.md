@@ -8,13 +8,13 @@ ms.topic: article
 ms.service: Azure
 ms.technology: Azure
 ms.date: 06/21/2017
-ms.author: liwong
-ms.openlocfilehash: 35faf0a6b74e4122c22ae0a6304d990dd13df057
-ms.sourcegitcommit: c57305dad01cad925faf50a64953c408429d4ca9
+ms.author: routlaw
+ms.openlocfilehash: 0930654af3c3f5bc6d3341959dff929225ebcf7d
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
-ms.locfileid: "26184591"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534486"
 ---
 # <a name="azure-tools-for-python-developers"></a>面向 Python 开发人员的 Azure 工具
 
@@ -25,7 +25,7 @@ Azure CLI 2.0 提供一个命令行接口用于在订阅中创建和配置 Azure
 [安装 Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli)
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
-可通过扩展在 Visual Studio Code 中完全支持 Python。 Marketplace 中的流行扩展提供代码完成、检查、调试、代码格式设置、片段编写等功能。
+可通过扩展在 Visual Studio Code 中完全支持 Python。 市场中的流行扩展提供代码完成、检查、调试、代码格式设置、片段编写等功能。
 
 [安装 Visual Studio Code 和扩展](https://code.visualstudio.com/docs/languages/python)
 
