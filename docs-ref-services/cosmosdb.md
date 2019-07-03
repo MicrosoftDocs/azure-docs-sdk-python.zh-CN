@@ -3,40 +3,40 @@ title: 用于 Python 的 Azure Cosmos DB 库
 description: 用于 Azure Cosmos DB 的 Python 客户端库的参考文档
 keywords: Azure, Python, SDK, API, SQL, 数据库, PostGres, Cosmos DB, NoSQL
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 03/20/2018
 ms.topic: article
 ms.devlang: python
 ms.service: cosmosdb
-ms.openlocfilehash: c2f3ea017a8864d4d2fb74a439c420f1f0313082
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: bb5e2af6a28d9543cce0c1e80fab1575b78f8cfa
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52276791"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534318"
 ---
-# <a name="azure-cosmos-db-libraries-for-python"></a><span data-ttu-id="16490-104">用于 Python 的 Azure Cosmos DB 库</span><span class="sxs-lookup"><span data-stu-id="16490-104">Azure Cosmos DB libraries for Python</span></span>
+# <a name="azure-cosmos-db-libraries-for-python"></a><span data-ttu-id="3d3f7-104">用于 Python 的 Azure Cosmos DB 库</span><span class="sxs-lookup"><span data-stu-id="3d3f7-104">Azure Cosmos DB libraries for Python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="16490-105">概述</span><span class="sxs-lookup"><span data-stu-id="16490-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="3d3f7-105">概述</span><span class="sxs-lookup"><span data-stu-id="3d3f7-105">Overview</span></span>
 
-<span data-ttu-id="16490-106">在 Python 应用程序中使用 Azure Cosmos DB，以便在 NoSQL 数据存储中存储和查询 JSON 文档。</span><span class="sxs-lookup"><span data-stu-id="16490-106">Use Azure Cosmos DB in your Python applications to store and query JSON documents in a NoSQL data store.</span></span>
+<span data-ttu-id="3d3f7-106">在 Python 应用程序中使用 Azure Cosmos DB，以便在 NoSQL 数据存储中存储和查询 JSON 文档。</span><span class="sxs-lookup"><span data-stu-id="3d3f7-106">Use Azure Cosmos DB in your Python applications to store and query JSON documents in a NoSQL data store.</span></span>
 
-<span data-ttu-id="16490-107">了解有关 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) 的详细信息。</span><span class="sxs-lookup"><span data-stu-id="16490-107">Learn more about [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction).</span></span>
+<span data-ttu-id="3d3f7-107">了解有关 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) 的详细信息。</span><span class="sxs-lookup"><span data-stu-id="3d3f7-107">Learn more about [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="16490-108">客户端库</span><span class="sxs-lookup"><span data-stu-id="16490-108">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="3d3f7-108">客户端库</span><span class="sxs-lookup"><span data-stu-id="3d3f7-108">Client library</span></span>
  ```bash
 pip install pydocumentdb
  ```
 
-## <a name="management-library"></a><span data-ttu-id="16490-109">管理库</span><span class="sxs-lookup"><span data-stu-id="16490-109">Management library</span></span>
+## <a name="management-library"></a><span data-ttu-id="3d3f7-109">管理库</span><span class="sxs-lookup"><span data-stu-id="3d3f7-109">Management library</span></span>
 ```bash
 pip install azure-mgmt-cosmosdb
 ```
 
-### <a name="example"></a><span data-ttu-id="16490-110">示例</span><span class="sxs-lookup"><span data-stu-id="16490-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="3d3f7-110">示例</span><span class="sxs-lookup"><span data-stu-id="3d3f7-110">Example</span></span>
 
-<span data-ttu-id="16490-111">使用类似于 SQL 的查询接口在 Azure CosmosDB 中查找匹配的文档：</span><span class="sxs-lookup"><span data-stu-id="16490-111">Find matching documents in Azure CosmosDB using a SQL-like query interface:</span></span>
+<span data-ttu-id="3d3f7-111">使用类似于 SQL 的查询接口在 Azure CosmosDB 中查找匹配的文档：</span><span class="sxs-lookup"><span data-stu-id="3d3f7-111">Find matching documents in Azure CosmosDB using a SQL-like query interface:</span></span>
 
 ```python
 import pydocumentdb
@@ -80,18 +80,18 @@ results = list(result_iterable)
 print(results)
 ```
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="16490-112">了解管理 API</span><span class="sxs-lookup"><span data-stu-id="16490-112">Explore the Management APIs</span></span>](/python/api/overview/azure/cosmosdb/management)
+> [<span data-ttu-id="3d3f7-112">了解管理 API</span><span class="sxs-lookup"><span data-stu-id="3d3f7-112">Explore the Management APIs</span></span>](/python/api/overview/azure/cosmosdb/management)
 
-## <a name="samples"></a><span data-ttu-id="16490-113">示例</span><span class="sxs-lookup"><span data-stu-id="16490-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="3d3f7-113">示例</span><span class="sxs-lookup"><span data-stu-id="3d3f7-113">Samples</span></span>
 
-* [<span data-ttu-id="16490-114">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB SQL API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="16490-114">Develop a Python app to access and manage data stored in Azure Cosmos DB SQL API account</span></span>](https://github.com/Azure-Samples/azure-cosmos-db-python-getting-started.git)
+* [<span data-ttu-id="3d3f7-114">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB SQL API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="3d3f7-114">Develop a Python app to access and manage data stored in Azure Cosmos DB SQL API account</span></span>](https://github.com/Azure-Samples/azure-cosmos-db-python-getting-started.git)
 
-* [<span data-ttu-id="16490-115">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB MongoDB API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="16490-115">Develop a Python app to access and manage data stored in Azure Cosmos DB MongoDB API account</span></span>](https://github.com/Azure-Samples/CosmosDB-Flask-Mongo-Sample.git)
+* [<span data-ttu-id="3d3f7-115">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB MongoDB API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="3d3f7-115">Develop a Python app to access and manage data stored in Azure Cosmos DB MongoDB API account</span></span>](https://github.com/Azure-Samples/CosmosDB-Flask-Mongo-Sample.git)
 
-* [<span data-ttu-id="16490-116">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB Gremlin API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="16490-116">Develop a Python app to access and manage data stored in Azure Cosmos DB Gremlin API account</span></span>](https://github.com/Azure-Samples/azure-cosmos-db-graph-python-getting-started.git)
+* [<span data-ttu-id="3d3f7-116">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB Gremlin API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="3d3f7-116">Develop a Python app to access and manage data stored in Azure Cosmos DB Gremlin API account</span></span>](https://github.com/Azure-Samples/azure-cosmos-db-graph-python-getting-started.git)
 
-* [<span data-ttu-id="16490-117">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB Cassandra API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="16490-117">Develop a Python app to access and manage data stored in Azure Cosmos DB Cassandra API account</span></span>](https://github.com/Azure-Samples/azure-cosmos-db-cassandra-python-getting-started.git)
+* [<span data-ttu-id="3d3f7-117">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB Cassandra API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="3d3f7-117">Develop a Python app to access and manage data stored in Azure Cosmos DB Cassandra API account</span></span>](https://github.com/Azure-Samples/azure-cosmos-db-cassandra-python-getting-started.git)
 
-* [<span data-ttu-id="16490-118">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB 表 API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="16490-118">Develop a Python app to access and manage data stored in Azure Cosmos DB Table API account</span></span>](https://github.com/Azure-Samples/storage-python-getting-started.git)
+* [<span data-ttu-id="3d3f7-118">开发一个 Python 应用来访问和管理存储在 Azure Cosmos DB 表 API 帐户中的数据</span><span class="sxs-lookup"><span data-stu-id="3d3f7-118">Develop a Python app to access and manage data stored in Azure Cosmos DB Table API account</span></span>](https://github.com/Azure-Samples/storage-python-getting-started.git)
 
 

@@ -3,7 +3,7 @@ title: 用于 Python 的 Azure 库
 description: 用于 Python 的 Azure 管理和服务库概述
 keywords: Azure, Python, SDK, API
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/01/2017
 ms.topic: article
@@ -11,22 +11,22 @@ ms.technology: azure
 ms.devlang: python
 ms.service: multiple
 ms.assetid: ''
-ms.openlocfilehash: 2b3e6d31edd7b946664853b3478e22205ab8c92e
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: bb17295de2f0272f0525fda5edab87e840764478
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29478800"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534468"
 ---
-# <a name="azure-libraries-for-python"></a><span data-ttu-id="2815d-104">用于 Python 的 Azure 库</span><span class="sxs-lookup"><span data-stu-id="2815d-104">Azure libraries for Python</span></span>
+# <a name="azure-libraries-for-python"></a><span data-ttu-id="00bd1-104">用于 Python 的 Azure 库</span><span class="sxs-lookup"><span data-stu-id="00bd1-104">Azure libraries for Python</span></span>
 
-<span data-ttu-id="2815d-105">借助用于 Python 的 Azure 库可以通过应用程序代码使用 Azure 服务和管理 Azure 资源。</span><span class="sxs-lookup"><span data-stu-id="2815d-105">The Azure libraries for Python let you use Azure services and manage Azure resources from your application code.</span></span> 
+<span data-ttu-id="00bd1-105">借助用于 Python 的 Azure 库可以通过应用程序代码使用 Azure 服务和管理 Azure 资源。</span><span class="sxs-lookup"><span data-stu-id="00bd1-105">The Azure libraries for Python let you use Azure services and manage Azure resources from your application code.</span></span> 
 
-## <a name="manage-azure-resources"></a><span data-ttu-id="2815d-106">管理 Azure 资源</span><span class="sxs-lookup"><span data-stu-id="2815d-106">Manage Azure resources</span></span>
+## <a name="manage-azure-resources"></a><span data-ttu-id="00bd1-106">管理 Azure 资源</span><span class="sxs-lookup"><span data-stu-id="00bd1-106">Manage Azure resources</span></span>
 
-<span data-ttu-id="2815d-107">使用用于 Python 的 Azure 库通过 Python 应用程序创建和管理 Azure 资源。</span><span class="sxs-lookup"><span data-stu-id="2815d-107">Create and manage Azure resources from Python applications using the Azure libraries for Python.</span></span>
+<span data-ttu-id="00bd1-107">使用用于 Python 的 Azure 库通过 Python 应用程序创建和管理 Azure 资源。</span><span class="sxs-lookup"><span data-stu-id="00bd1-107">Create and manage Azure resources from Python applications using the Azure libraries for Python.</span></span>
 
-<span data-ttu-id="2815d-108">例如，若要创建 SQL Server 实例，可使用以下代码：</span><span class="sxs-lookup"><span data-stu-id="2815d-108">For example, to create a SQL Server instance, you can use the following code:</span></span>
+<span data-ttu-id="00bd1-108">例如，若要创建 SQL Server 实例，可使用以下代码：</span><span class="sxs-lookup"><span data-stu-id="00bd1-108">For example, to create a SQL Server instance, you can use the following code:</span></span>
 
 ```python
 sql_client = SqlManagementClient(
@@ -46,13 +46,13 @@ server = sql_client.servers.create_or_update(
 )
 ```
 
-<span data-ttu-id="2815d-109">查看[安装说明](python-sdk-azure-install.md)了解库的完整列表以及如何将其导入项目，然后阅读[入门文章](python-sdk-azure-get-started.yml)来设置身份验证并针对自己的 Azure 订阅运行示例代码。</span><span class="sxs-lookup"><span data-stu-id="2815d-109">Review the [install instructions](python-sdk-azure-install.md) for a full list of the libraries and how to import them into your projects and then read the [get started article](python-sdk-azure-get-started.yml) to set up your authentication and run sample code against your own Azure subscription.</span></span>
+<span data-ttu-id="00bd1-109">查看[安装说明](python-sdk-azure-install.md)了解库的完整列表以及如何将其导入项目，然后阅读[入门文章](python-sdk-azure-get-started.yml)来设置身份验证并针对自己的 Azure 订阅运行示例代码。</span><span class="sxs-lookup"><span data-stu-id="00bd1-109">Review the [install instructions](python-sdk-azure-install.md) for a full list of the libraries and how to import them into your projects and then read the [get started article](python-sdk-azure-get-started.yml) to set up your authentication and run sample code against your own Azure subscription.</span></span>
 
-## <a name="connect-to-azure-services"></a><span data-ttu-id="2815d-110">连接到 Azure 服务</span><span class="sxs-lookup"><span data-stu-id="2815d-110">Connect to Azure services</span></span>
+## <a name="connect-to-azure-services"></a><span data-ttu-id="00bd1-110">连接到 Azure 服务</span><span class="sxs-lookup"><span data-stu-id="00bd1-110">Connect to Azure services</span></span>
 
-<span data-ttu-id="2815d-111">使用 Python 库除了可以在 Azure 中创建和管理资源以外，还可以连接并使用应用中的资源。</span><span class="sxs-lookup"><span data-stu-id="2815d-111">In addition to using Python libraries to create and manage resources within Azure, you can also use Python libraries to connect and use those resources in your apps.</span></span> <span data-ttu-id="2815d-112">例如，可以更新表 SQL 数据库或者在 Azure 存储中存储文件。</span><span class="sxs-lookup"><span data-stu-id="2815d-112">For example, you might update a table SQL Database or store files in Azure Storage.</span></span> <span data-ttu-id="2815d-113">从库的完整列表中选择特定服务所需的库，并访问 Python 开发人员中心获取教程和示例代码来帮助自己在应用中使用这些库。</span><span class="sxs-lookup"><span data-stu-id="2815d-113">Select the library you need for a particular service from the complete list of libraries and visit the Python developer center for tutorials and sample code for help using them in your apps.</span></span>
+<span data-ttu-id="00bd1-111">使用 Python 库除了可以在 Azure 中创建和管理资源以外，还可以连接并使用应用中的资源。</span><span class="sxs-lookup"><span data-stu-id="00bd1-111">In addition to using Python libraries to create and manage resources within Azure, you can also use Python libraries to connect and use those resources in your apps.</span></span> <span data-ttu-id="00bd1-112">例如，可以更新表 SQL 数据库或者在 Azure 存储中存储文件。</span><span class="sxs-lookup"><span data-stu-id="00bd1-112">For example, you might update a table SQL Database or store files in Azure Storage.</span></span> <span data-ttu-id="00bd1-113">从库的完整列表中选择特定服务所需的库，并访问 Python 开发人员中心获取教程和示例代码来帮助自己在应用中使用这些库。</span><span class="sxs-lookup"><span data-stu-id="00bd1-113">Select the library you need for a particular service from the complete list of libraries and visit the Python developer center for tutorials and sample code for help using them in your apps.</span></span>
 
-<span data-ttu-id="2815d-114">例如，若要在 Blob 中上传简单的 HTML 页面并获取 URL，请使用以下代码：</span><span class="sxs-lookup"><span data-stu-id="2815d-114">For example, to upload a simple HTML page on a blob and get the Url:</span></span>
+<span data-ttu-id="00bd1-114">例如，若要在 Blob 中上传简单的 HTML 页面并获取 URL，请使用以下代码：</span><span class="sxs-lookup"><span data-stu-id="00bd1-114">For example, to upload a simple HTML page on a blob and get the Url:</span></span>
 
 ```python
 storage_client = CloudStorageAccount(storage_account_name, storage_key)
@@ -73,14 +73,14 @@ blob_service.create_blob_from_bytes(
 print(blob_service.make_blob_url('mycontainername', 'myblobname'))
 ```
 
-## <a name="sample-code-and-reference"></a><span data-ttu-id="2815d-115">代码示例和参考</span><span class="sxs-lookup"><span data-stu-id="2815d-115">Sample code and reference</span></span>
-<span data-ttu-id="2815d-116">以下示例涵盖可以通过用于 Python 的 Azure 管理库完成的常见自动化任务，并提供可在自己应用中使用的现成代码：</span><span class="sxs-lookup"><span data-stu-id="2815d-116">The following samples cover common automation tasks with the Azure management libraries for Python and have code ready to use in your own apps:</span></span>
-- [<span data-ttu-id="2815d-117">虚拟机</span><span class="sxs-lookup"><span data-stu-id="2815d-117">Virtual Machines</span></span>](python-sdk-azure-virtual-machine-samples.md)
-- [<span data-ttu-id="2815d-118">Web 应用</span><span class="sxs-lookup"><span data-stu-id="2815d-118">Web apps</span></span>](python-sdk-azure-web-apps-samples.md)
-- [<span data-ttu-id="2815d-119">SQL 数据库</span><span class="sxs-lookup"><span data-stu-id="2815d-119">SQL Database</span></span>](python-sdk-azure-sql-database-samples.md)
+## <a name="sample-code-and-reference"></a><span data-ttu-id="00bd1-115">代码示例和参考</span><span class="sxs-lookup"><span data-stu-id="00bd1-115">Sample code and reference</span></span>
+<span data-ttu-id="00bd1-116">以下示例涵盖可以通过用于 Python 的 Azure 管理库完成的常见自动化任务，并提供可在自己应用中使用的现成代码：</span><span class="sxs-lookup"><span data-stu-id="00bd1-116">The following samples cover common automation tasks with the Azure management libraries for Python and have code ready to use in your own apps:</span></span>
+- [<span data-ttu-id="00bd1-117">虚拟机</span><span class="sxs-lookup"><span data-stu-id="00bd1-117">Virtual Machines</span></span>](python-sdk-azure-virtual-machine-samples.md)
+- [<span data-ttu-id="00bd1-118">Web 应用</span><span class="sxs-lookup"><span data-stu-id="00bd1-118">Web apps</span></span>](python-sdk-azure-web-apps-samples.md)
+- [<span data-ttu-id="00bd1-119">SQL 数据库</span><span class="sxs-lookup"><span data-stu-id="00bd1-119">SQL Database</span></span>](python-sdk-azure-sql-database-samples.md)
 
-<span data-ttu-id="2815d-120">我们针对服务和管理库中的所有包提供了[参考](/python/api/overview/azure)文档。</span><span class="sxs-lookup"><span data-stu-id="2815d-120">A [reference](/python/api/overview/azure) is available for all packages in both the service an management libraries.</span></span> <span data-ttu-id="2815d-121">[发行说明](python-sdk-azure-release-notes.md)中介绍了新增功能、重大更改，并提供了有关如何从以前的版本迁移的说明。</span><span class="sxs-lookup"><span data-stu-id="2815d-121">New features, breaking changes, and migration instructions from previous versions are available in the [release notes](python-sdk-azure-release-notes.md).</span></span> 
+<span data-ttu-id="00bd1-120">我们针对服务和管理库中的所有包提供了[参考](/python/api/overview/azure)文档。</span><span class="sxs-lookup"><span data-stu-id="00bd1-120">A [reference](/python/api/overview/azure) is available for all packages in both the service an management libraries.</span></span> <span data-ttu-id="00bd1-121">[发行说明](python-sdk-azure-release-notes.md)中介绍了新增功能、重大更改，并提供了有关如何从以前的版本迁移的说明。</span><span class="sxs-lookup"><span data-stu-id="00bd1-121">New features, breaking changes, and migration instructions from previous versions are available in the [release notes](python-sdk-azure-release-notes.md).</span></span> 
 
-## <a name="get-help-and-give-feedback"></a><span data-ttu-id="2815d-122">获取帮助和提供反馈</span><span class="sxs-lookup"><span data-stu-id="2815d-122">Get help and give feedback</span></span>
+## <a name="get-help-and-give-feedback"></a><span data-ttu-id="00bd1-122">获取帮助和提供反馈</span><span class="sxs-lookup"><span data-stu-id="00bd1-122">Get help and give feedback</span></span>
 
-<span data-ttu-id="2815d-123">请在 [Stack Overflow](http://stackoverflow.com/questions/tagged/azure-sdk-python) 社区中提问，在[项目 GitHub](https://github.com/Azure/azure-sdk-for-python) 中反映有关 SDK 的问题。</span><span class="sxs-lookup"><span data-stu-id="2815d-123">Post questions to the community on [Stack Overflow](http://stackoverflow.com/questions/tagged/azure-sdk-python) and open issues against the SDK on the [project GitHub](https://github.com/Azure/azure-sdk-for-python).</span></span>
+<span data-ttu-id="00bd1-123">请在 [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-sdk-python) 社区中提问，在[项目 GitHub](https://github.com/Azure/azure-sdk-for-python) 中反映有关 SDK 的问题。</span><span class="sxs-lookup"><span data-stu-id="00bd1-123">Post questions to the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-sdk-python) and open issues against the SDK on the [project GitHub](https://github.com/Azure/azure-sdk-for-python).</span></span>
