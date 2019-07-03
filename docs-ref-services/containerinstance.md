@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: container-instances
-ms.openlocfilehash: 88df9443efb98bc5cec26c5eb4b01a4956141d40
-ms.sourcegitcommit: 1b45953f168cbf36869c24c1741d70153b88b9fc
+ms.openlocfilehash: 19e0e629253462f77d58740857b853d1c94d53cf
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59675932"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534322"
 ---
 # <a name="azure-container-instances-libraries-for-python"></a>用于 Python 的 Azure 容器实例库
 
@@ -54,7 +54,7 @@ pip install azure-mgmt-containerinstance
    export AZURE_AUTH_LOCATION=/home/yourusername/my.azureauth
    ```
 
-创建凭据文件并填充 `AZURE_AUTH_LOCATION` 环境变量以后，请使用 [client_factory][client_factory] 模块的 `get_client_from_auth_file` 方法初始化 [ResourceManagementClient][ResourceManagementClient] 和 [ContainerInstanceManagementClient][ContainerInstanceManagementClient] 对象。
+创建凭据文件并填充 `AZURE_AUTH_LOCATION` 环境变量以后，请使用 [client_factory][client_factory] 模块的 `get_client_from_auth_file` 方法初始化 ResourceManagementClient 和 [ContainerInstanceManagementClient][ContainerInstanceManagementClient] 对象。
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
@@ -79,7 +79,7 @@ pip install azure-mgmt-containerinstance
 
 此示例创建的容器组包含单个基于任务的容器。 此示例演示多项功能：
 
-* [命令行重写](/azure/container-instances/container-instances-restart-policy#command-line-override) - 指定自定义命令行，该命令行不同于在容器的 Dockerfile `CMD` 行中指定的命令行。 使用命令行重写，可以指定在容器启动时执行的自定义命令行，重写植入到容器中的默认命令行。 若要在容器启动时执行多个命令，则适用以下规范：
+* [命令行重写](/azure/container-instances/container-instances-start-command) - 指定自定义命令行，该命令行不同于在容器的 Dockerfile `CMD` 行中指定的命令行。 使用命令行重写，可以指定在容器启动时执行的自定义命令行，重写植入到容器中的默认命令行。 若要在容器启动时执行多个命令，则适用以下规范：
 
    如果要运行带有多个命令行参数的**单个命令**，例如 `echo FOO BAR`，必须以字符串列表的形式向[容器][Container]的 `command` 属性提供这些参数。 例如：
 
@@ -99,7 +99,7 @@ pip install azure-mgmt-containerinstance
 
 此示例列出资源组中的容器组，然后列显其部分属性。
 
-列出容器组时，每个返回的组的 [instance_view][instance_view] 为 `None`。 若要获取某个容器组中容器的详细信息，必须接着对该容器组执行 [get][containergroupoperations_get] 操作，以便返回 `instance_view` 属性已填充的组。 如需通过示例来了解如何在容器组的 `instance_view` 中循环访问该组的容器，请参阅下一部分：[获取现有的容器组](#get-an-existing-container-group)。
+列出容器组时，每个返回的组的 [instance_view][instance_view] 为 `None`。 若要获取某个容器组中容器的详细信息，必须接着对该容器组执行 [get][containergroupoperations_get] 操作，此操作会返回该组，并且该组的 `instance_view` 属性已填充。 如需通过示例来了解如何在容器组的 `instance_view` 中循环访问该组的容器，请参阅下一部分：[获取现有的容器组](#get-an-existing-container-group)。
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[list_container_groups](~/aci-docs-sample-python/src/aci_docs_sample.py#L279-L293 "List container groups")]
@@ -108,7 +108,7 @@ pip install azure-mgmt-containerinstance
 
 此示例获取资源组中的特定容器组，然后列显其部分属性（包括其容器）及属性值。
 
-[get 操作][containergroupoperations_get]返回其 [instance_view][instance_view] 已填充的容器组，这样就可以循环访问组中的每个容器。 只有 `get` 操作会填充容器组的 `instance_vew` 属性--列出订阅或资源组中的容器组不会填充实例视图，因为列出操作的开销可能很昂贵（例如，如果列出数百个容器组，而每个容器组又可能包含多个容器，则开销会很大）。 如前面的[列出容器组](#list-container-groups)部分所述，在 `list` 操作之后，接着必须对特定的容器组执行 `get` 操作，以便获取其容器实例详细信息。
+[get 操作][containergroupoperations_get]会返回一个容器组，并且该组的 instance_view 已填充，这样就可以循环访问该组中的每个容器。 只有 `get` 操作会填充容器组的 `instance_vew` 属性--列出订阅或资源组中的容器组不会填充实例视图，因为列出操作的开销可能很昂贵（例如，如果列出数百个容器组，而每个容器组又可能包含多个容器，则开销会很大）。 如前面的[列出容器组](#list-container-groups)部分所述，在 `list` 操作之后，接着必须对特定的容器组执行 `get` 操作，以便获取其容器实例详细信息。
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L296-L325 "Get container group")]
@@ -130,7 +130,7 @@ pip install azure-mgmt-containerinstance
 
   [Azure 代码示例][samples-aci]
 
-* 了解更多可在应用中使用的[示例 Python 代码][samples-python]。
+* 详细了解可在应用中使用的[示例 Python 代码][samples-python]。
 
 > [!div class="nextstepaction"]
 > [了解管理 API](/python/api/overview/azure/containerinstance/management)
@@ -145,7 +145,7 @@ pip install azure-mgmt-containerinstance
 [client_factory]: /python/api/azure.common.client_factory
 [Container]: /python/api/azure.mgmt.containerinstance.models.container
 [ContainerGroupInstanceView]: /python/api/azure.mgmt.containerinstance.models.containergrouppropertiesinstanceview
-[containergroupoperations_get]: /python/api/azure.mgmt.containerinstance.operations.containergroupsoperations#get
+[containergroupoperations_get]: /python/api/azure.mgmt.containerinstance.operations.containergroupsoperations#get-resource-group-name--container-group-name--custom-headers-none--raw-false----operation-config-
 [ContainerInstanceManagementClient]: /python/api/azure.mgmt.containerinstance.containerinstancemanagementclient
 [instance_view]: /python/api/azure.mgmt.containerinstance.models.containergroup#variables
 [ResourceManagementClient]: /python/api/azure.mgmt.resource.resources.resourcemanagementclient
