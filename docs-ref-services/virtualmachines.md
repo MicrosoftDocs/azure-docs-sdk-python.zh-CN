@@ -3,7 +3,7 @@ title: 用于 Python 的 Azure 虚拟机库
 description: ''
 keywords: Azure, Python, SDK, API, 计算, 虚拟机
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/09/2017
 ms.topic: article
@@ -11,34 +11,34 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: compute
-ms.openlocfilehash: 78750d5f98ab81401c48493aff98d4268c01850d
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: e09ffed98f3f6050e34ca2cb39e645e30f8bdb15
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376702"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534180"
 ---
-# <a name="azure-virtual-machine-libraries"></a><span data-ttu-id="99b45-103">Azure 虚拟机库</span><span class="sxs-lookup"><span data-stu-id="99b45-103">Azure virtual machine libraries</span></span>
+# <a name="azure-virtual-machine-libraries"></a><span data-ttu-id="c585d-103">Azure 虚拟机库</span><span class="sxs-lookup"><span data-stu-id="c585d-103">Azure virtual machine libraries</span></span>
 
-## <a name="overview"></a><span data-ttu-id="99b45-104">概述</span><span class="sxs-lookup"><span data-stu-id="99b45-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="c585d-104">概述</span><span class="sxs-lookup"><span data-stu-id="c585d-104">Overview</span></span>
 
-<span data-ttu-id="99b45-105">运行 Linux 或 Windows 的按需可缩放计算资源。</span><span class="sxs-lookup"><span data-stu-id="99b45-105">On-demand, scalable computing resources running Linux or Windows.</span></span>
+<span data-ttu-id="c585d-105">运行 Linux 或 Windows 的按需可缩放计算资源。</span><span class="sxs-lookup"><span data-stu-id="c585d-105">On-demand, scalable computing resources running Linux or Windows.</span></span>
 
-<span data-ttu-id="99b45-106">若要开始使用 Azure 虚拟机，请参阅[使用 Azure 门户创建 Linux 虚拟机](/azure/virtual-machines/linux/quick-create-portal)。</span><span class="sxs-lookup"><span data-stu-id="99b45-106">To get started with Azure Virtual Machines, see [Create a Linux virtual machine with the Azure portal](/azure/virtual-machines/linux/quick-create-portal).</span></span>
+<span data-ttu-id="c585d-106">若要开始使用 Azure 虚拟机，请参阅[使用 Azure 门户创建 Linux 虚拟机](/azure/virtual-machines/linux/quick-create-portal)。</span><span class="sxs-lookup"><span data-stu-id="c585d-106">To get started with Azure Virtual Machines, see [Create a Linux virtual machine with the Azure portal](/azure/virtual-machines/linux/quick-create-portal).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="99b45-107">管理 API</span><span class="sxs-lookup"><span data-stu-id="99b45-107">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="c585d-107">管理 API</span><span class="sxs-lookup"><span data-stu-id="c585d-107">Management API</span></span>
 
-<span data-ttu-id="99b45-108">使用管理 API 通过代码在 Azure 中创建、配置、管理和缩放 Windows 与 Linux 虚拟机。</span><span class="sxs-lookup"><span data-stu-id="99b45-108">Create, configure, manage and scale Windows and Linux virtual machines in Azure from your code with the management API.</span></span>
+<span data-ttu-id="c585d-108">使用管理 API 通过代码在 Azure 中创建、配置、管理和缩放 Windows 与 Linux 虚拟机。</span><span class="sxs-lookup"><span data-stu-id="c585d-108">Create, configure, manage and scale Windows and Linux virtual machines in Azure from your code with the management API.</span></span>
 
-<span data-ttu-id="99b45-109">通过 pip 安装库。</span><span class="sxs-lookup"><span data-stu-id="99b45-109">Install the library via pip.</span></span>
+<span data-ttu-id="c585d-109">通过 pip 安装库。</span><span class="sxs-lookup"><span data-stu-id="c585d-109">Install the library via pip.</span></span>
 
 ```bash
 pip install azure-mgmt-compute
 ```
 
-### <a name="example"></a><span data-ttu-id="99b45-110">示例</span><span class="sxs-lookup"><span data-stu-id="99b45-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="c585d-110">示例</span><span class="sxs-lookup"><span data-stu-id="c585d-110">Example</span></span>
 
-<span data-ttu-id="99b45-111">使用托管服务标识 (MSI) 身份验证在现有 Azure 资源组中创建新的 Linux 虚拟机。</span><span class="sxs-lookup"><span data-stu-id="99b45-111">Create a new Linux virtual machine in an existing Azure resource group with Managed Service Identity(MSI) authentication.</span></span>
+<span data-ttu-id="c585d-111">使用托管服务标识 (MSI) 身份验证在现有 Azure 资源组中创建新的 Linux 虚拟机。</span><span class="sxs-lookup"><span data-stu-id="c585d-111">Create a new Linux virtual machine in an existing Azure resource group with Managed Service Identity(MSI) authentication.</span></span>
 
 ```python
 VM_PARAMETERS={
@@ -72,19 +72,19 @@ def create_vm()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="99b45-112">了解管理 API</span><span class="sxs-lookup"><span data-stu-id="99b45-112">Explore the Management APIs</span></span>](/python/api/overview/azure/virtualmachines/management)
+> [<span data-ttu-id="c585d-112">了解管理 API</span><span class="sxs-lookup"><span data-stu-id="c585d-112">Explore the Management APIs</span></span>](/python/api/overview/azure/virtualmachines/management)
 
-## <a name="samples"></a><span data-ttu-id="99b45-113">示例</span><span class="sxs-lookup"><span data-stu-id="99b45-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="c585d-113">示例</span><span class="sxs-lookup"><span data-stu-id="c585d-113">Samples</span></span>
 
-* <span data-ttu-id="99b45-114">[管理虚拟机][1]</span><span class="sxs-lookup"><span data-stu-id="99b45-114">[Manage virtual machines][1]</span></span>
-* <span data-ttu-id="99b45-115">[使用托管服务标识 (MSI) 进行身份验证][2]</span><span class="sxs-lookup"><span data-stu-id="99b45-115">[Authenticate with Managed Service Identity][2]</span></span>
-* <span data-ttu-id="99b45-116">[使用托管服务标识扩展创建虚拟机][3]</span><span class="sxs-lookup"><span data-stu-id="99b45-116">[Create a virtual machine with Managed Service Identity Extension][3]</span></span>
-* <span data-ttu-id="99b45-117">[管理负载均衡器][4]</span><span class="sxs-lookup"><span data-stu-id="99b45-117">[Manage a load balancer][4]</span></span>
-* <span data-ttu-id="99b45-118">[创建和配置托管磁盘][5]</span><span class="sxs-lookup"><span data-stu-id="99b45-118">[Create and configure managed disks][5]</span></span>
-* <span data-ttu-id="99b45-119">[列出映像][6]</span><span class="sxs-lookup"><span data-stu-id="99b45-119">[List images][6]</span></span> 
-* <span data-ttu-id="99b45-120">[监视虚拟机][7]</span><span class="sxs-lookup"><span data-stu-id="99b45-120">[Monitor virtual machines][7]</span></span>
+* <span data-ttu-id="c585d-114">[管理虚拟机][1]</span><span class="sxs-lookup"><span data-stu-id="c585d-114">[Manage virtual machines][1]</span></span>
+* <span data-ttu-id="c585d-115">[使用托管服务标识进行身份验证][2]</span><span class="sxs-lookup"><span data-stu-id="c585d-115">[Authenticate with Managed Service Identity][2]</span></span>
+* <span data-ttu-id="c585d-116">[使用托管服务标识扩展创建虚拟机][3]</span><span class="sxs-lookup"><span data-stu-id="c585d-116">[Create a virtual machine with Managed Service Identity Extension][3]</span></span>
+* <span data-ttu-id="c585d-117">[管理负载均衡器][4]</span><span class="sxs-lookup"><span data-stu-id="c585d-117">[Manage a load balancer][4]</span></span>
+* <span data-ttu-id="c585d-118">[创建和配置托管磁盘][5]</span><span class="sxs-lookup"><span data-stu-id="c585d-118">[Create and configure managed disks][5]</span></span>
+* <span data-ttu-id="c585d-119">[列出映像][6]</span><span class="sxs-lookup"><span data-stu-id="c585d-119">[List images][6]</span></span> 
+* <span data-ttu-id="c585d-120">[监视虚拟机][7]</span><span class="sxs-lookup"><span data-stu-id="c585d-120">[Monitor virtual machines][7]</span></span>
 
-<span data-ttu-id="99b45-121">查看虚拟机示例的[完整列表](https://azure.microsoft.com/resources/samples/?platform=python&term=virtual-machines)。</span><span class="sxs-lookup"><span data-stu-id="99b45-121">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=python&term=virtual-machines) of virtual machine samples.</span></span>
+<span data-ttu-id="c585d-121">查看虚拟机示例的[完整列表](https://azure.microsoft.com/resources/samples/?platform=python&term=virtual-machines)。</span><span class="sxs-lookup"><span data-stu-id="c585d-121">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=python&term=virtual-machines) of virtual machine samples.</span></span>
 
 [1]: https://azure.microsoft.com/resources/samples/virtual-machines-python-manage/
 [2]: https://github.com/Azure-Samples/resource-manager-python-manage-resources-with-msi
