@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 6014937fb41d6074e94578ccc47c30eb7b3f63d2
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: 9fd11cbc7b987b970ceee85c7b11b22e3d6299ea
+ms.sourcegitcommit: 31d7df367b15ec09a5a610eb333295bba0f6b351
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376878"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67395451"
 ---
 # <a name="installation"></a>安装
 
@@ -77,3 +77,24 @@ git clone git://github.com/Azure/azure-sdk-for-python.git
 cd azure-sdk-for-python
 python setup.py install
 ```
+
+## <a name="install-an-older-version-with-pip"></a>使用 pip 安装较旧版本
+可以通过指定 'azure==3.0.0' 版本详细信息来安装 `azure` 的较旧版本。
+```bash
+pip install azure==3.0.0 
+```
+## <a name="check-sdk-installation-details-with-pip"></a>使用 pip 检查 SDK 安装详细信息
+可以检查 `azure` SDK 安装位置、版本详细信息等。
+```bash
+pip show azure # Show installed version, location details etc.
+pip freeze     # Output installed packages in requirements format.
+pip list       # List installed packages, including editables.
+```
+## <a name="to-uninstall-with-pip"></a>使用 pip 进行卸载
+可以使用 `azure` 元包在单个行中卸载所有 Azure 库。
+```bash
+pip uninstall azure 
+```
+> [!NOTE]
+> `pip uninstall azure` 删除 `azure` 元包但会留下个别 `azure-*` 包（以及其他包，如 `adal` 和 `msrest`）。 Python 和 pip 的一个方面是，对于具有依赖项的所有包，卸载初始包不会卸载依赖项。 若要删除 `azure-` 及其支持包，请运行命令 `pip freeze | grep 'azure-' | xargs pip uninstall -y`（然后分别为 adal、msrest 和 msrestazureand 执行卸载。）
+
