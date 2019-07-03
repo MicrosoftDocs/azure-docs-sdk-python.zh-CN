@@ -9,13 +9,13 @@ ms.topic: article
 ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
-ms.author: liwong
-ms.openlocfilehash: bee17efdb90d6365acb2adbf9c01d1f7e843da42
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.author: routlaw
+ms.openlocfilehash: 8618b42a545e2e36ccca8944ef1dc6cf49966b00
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376860"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534417"
 ---
 # <a name="managed-disks"></a>托管磁盘
 
@@ -65,6 +65,29 @@ async_creation = compute_client.disks.create_or_update(
 disk_resource = async_creation.result()
 ```
 
+### <a name="create-an-image-from-blob-storage"></a>从 Blob 存储创建映像
+
+```python
+from azure.mgmt.compute.models import DiskCreateOption
+
+async_creation = compute_client.images.create_or_update(
+    'my_resource_group',
+    'my_image_name',
+    {
+        'location': 'eastus',
+        'storage_profile': {
+           'os_disk': {
+              'os_type': 'Linux',
+              'os_state': "Generalized",
+              'blob_uri': 'https://bg09.blob.core.windows.net/vm-images/non-existent.vhd',
+              'caching': "ReadWrite",
+           }
+        }        
+    }
+)
+image_resource = async_creation.result()
+```
+
 ### <a name="create-a-managed-disk-from-your-own-image"></a>从自己的映像创建托管磁盘
 
 ```python
@@ -105,6 +128,18 @@ storage_profile = azure.mgmt.compute.models.StorageProfile(
 ```
 
 此 ``storage_profile`` 参数现在有效。 若要获取有关如何在 Python 中创建 VM（包括网络等）的完整示例，请查看完整的 [Python 中的 VM 教程](https://github.com/Azure-Samples/virtual-machines-python-manage)。
+
+也可以从自己的映像创建 ``storage_profile``：
+
+```python
+# If you don't know the id, do a 'get' like this to obtain it
+image = compute_client.images.get(self.group_name, 'myImageDisk')
+storage_profile = azure.mgmt.compute.models.StorageProfile(
+    image_reference = azure.mgmt.compute.models.ImageReference(
+        id = image.id
+    )
+)
+```
 
 可以轻松附加以前预配的托管磁盘。
 

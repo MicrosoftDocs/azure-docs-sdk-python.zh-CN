@@ -3,19 +3,19 @@ title: 用于 Python 的 Azure MySQL/PostgreSQL 库
 description: ''
 keywords: Azure, Python, SDK, API, SQL, 数据库, MySQL, PostgreSQL
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 07/19/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
-ms.openlocfilehash: 402e87ae81e6df64b040293992244902313e5b1b
-ms.sourcegitcommit: fba77bdf8eb9f49621be94544d9fef88aff98c14
+ms.openlocfilehash: 81a29ea16dc9857257859181f0c2e5be8b4b7901
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747717"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534238"
 ---
 # <a name="azure-mysqlpostgresql-libraries-for-python"></a>用于 Python 的 Azure MySQL/PostgreSQL 库
 
@@ -25,7 +25,7 @@ ms.locfileid: "54747717"
 
 ### <a name="client-odbc-driver-and-pyodbc"></a>客户端 ODBC 驱动程序和 pyodbc
 
-建议用于访问 Azure Database for MySQL 的客户端库是 Microsoft [ODBC 驱动程序](/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)。 使用 ODBC 驱动程序可直接连接到数据库并执行 SQL 语句。
+建议用于访问 Azure Database for MySQL 的客户端库是 Microsoft [ODBC 驱动程序](/azure/sql-database/sql-database-connect-query-python#prerequisites)。 使用 ODBC 驱动程序可直接连接到数据库并执行 SQL 语句。
 
 #### <a name="example"></a>示例
 
@@ -113,7 +113,7 @@ firewall_rule = rule_creation_poller.result()
 详细了解 [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)。
 
 ### <a name="client-odbc-driver-and-pyodbc"></a>客户端 ODBC 驱动程序和 pyodbc
-建议用于访问 Azure Database for PostgreSQL 的客户端库是 Microsoft [ODBC 驱动程序和 pyodbc](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)。
+建议用于访问 Azure Database for PostgreSQL 的客户端库是 Microsoft [ODBC 驱动程序和 pyodbc](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites)。
 
 #### <a name="example"></a>示例 
 

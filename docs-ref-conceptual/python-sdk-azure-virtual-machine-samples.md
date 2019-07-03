@@ -3,7 +3,7 @@ title: 用于 Python 的 Azure 管理库的虚拟机示例
 description: 获取有关使用用于 Python 的 Azure 管理库创建和更新 Azure 虚拟机的示例代码
 keywords: Azure, Python, SDK, API, 虚拟机
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/02/2017
 ms.topic: article
@@ -11,12 +11,12 @@ ms.technology: azure
 ms.devlang: python
 ms.service: multiple
 ms.assetid: ''
-ms.openlocfilehash: 0222632b0d65395e00f64f07806b03ddab4f8222
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: cc839385aa7b26737afc14adc945bdc842c16603
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2017
-ms.locfileid: "20909260"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534395"
 ---
 # <a name="azure-management-libraries-for-python-samples-for-virtual-machines"></a>用于 Python 的 Azure 管理库的虚拟机示例
 
