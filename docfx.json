@@ -132,13 +132,17 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "bilingual_type": "hover over",
       "breadcrumb_path": "/python/azure/bread/toc.json",
       "apiPlatform": "python",
       "brand": "azure",
+      "searchScope": [
+        "Azure",
+        "Azure SDK for Python"
+      ],
       "disable_contribution_on_translation_quality": [
         "MT"
-      ]
+      ],
+      "bilingual_type": "hover over"
     },
     "fileMetadata": {
       "monikers": {
